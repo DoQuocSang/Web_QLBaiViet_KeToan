@@ -1,8 +1,16 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
-Route::get('/', 'HomeController@index');
+//Frontend
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/trang-chu', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
+
+//Backend
+Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/dashboard', [AdminController::class, 'show_dashboard']);
+Route::get('/admin-logout', [AdminController::class, 'logout']);
+Route::post('/admin-dashboard', [AdminController::class, 'dashboard']);

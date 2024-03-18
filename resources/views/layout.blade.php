@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SpaceMax | Multi Purpose HTML Template</title>
     <!-- favicon CSS -->
-    <link rel="icon" type="image/png")}} sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <!-- fonts -->
     <link href={{("public/frontend/fonts/sfuidisplay.css")}} rel="stylesheet">
     <!-- Icon fonts -->
@@ -47,7 +47,7 @@
         <!-- =========== Start of Navigation (main menu) ============ -->
         <header class="navbar navbar-sticky navbar-expand-lg navbar-light">
             <div class="container position-relative">
-                <a class="navbar-brand" href={{URL::to('/trang-chu')}}>
+                <a class="navbar-brand" href={{URL::to('/home')}}>
                     <img class="navbar-brand__regular" src={{("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
                     <img class="navbar-brand__sticky" src={{("public/frontend/img/brand-logo-black.png")}} alt="sticky brand-logo">
                 </a>
@@ -69,7 +69,7 @@
                                 <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Landing Pages</a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href={{URL::to('/trang-chu')}}>Home - 1</a>
+                                        <a class="dropdown-item" href={{URL::to('/home')}}>Home - 1</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="home-2.html">Home - 2</a>
