@@ -20,4 +20,9 @@ Route::post('/admin-dashboard', [AdminController::class, 'dashboard']);
 //User
 Route::get('/all-user', [User::class, 'all_user']);
 Route::get('/add-user', [User::class, 'add_user']);
+Route::get('/edit-user/{id}', [User::class, 'edit_user']);
+Route::get('/delete-user/{id}', [User::class, 'delete_user']);
+
 Route::post('/save-user', [User::class, 'save_user']);
+Route::post('/update-user/{id}', [User::class, 'update_user']);
+
