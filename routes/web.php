@@ -20,3 +20,4 @@ Route::post('/admin-dashboard', [AdminController::class, 'dashboard']);
 //User
 Route::get('/all-user', [User::class, 'all_user']);
 Route::get('/add-user', [User::class, 'add_user']);
+Route::post('/save-user', [User::class, 'save_user']);
