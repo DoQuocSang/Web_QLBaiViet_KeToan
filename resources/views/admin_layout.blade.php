@@ -63,8 +63,8 @@
                     <li>
                         <a href="#"><i class="fa fa-user"></i><span class="nav-label">Người dùng</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
+                            <li><a href="{{URL::to('/all-user')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-user')}}">Thêm mới</a></li>
                             <li><a href="ecommerce_product.html">Chỉnh sửa</a></li>
                         </ul>
                     </li>
