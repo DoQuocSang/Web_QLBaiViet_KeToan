@@ -16,25 +16,26 @@ class SupportLinksTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('tbl_supportlink')->insert([
-            'title' => 'Facebook',
+            'title' => 'Facebook*',
             'url' => 'https://www.facebook.com/PhanMemKeToanAMnote',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
 
         DB::table('tbl_supportlink')->insert([
-            'title' => 'Gọi hỗ trợ',
+            'title' => 'Gọi hỗ trợ*',
             'url' => '090-613-6161(korean) / 08-5555-9000(vn)',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
         DB::table('tbl_supportlink')->insert([
-            'title' => 'Youtube',
+            'title' => 'Youtube*',
             'url' => 'https://www.youtube.com/@amgroup8156',
             'created_at' => now(),
             'updated_at' => now(),
-        ]);DB::table('tbl_supportlink')->insert([
-            'title' => 'Zoom',
+        ]);
+        DB::table('tbl_supportlink')->insert([
+            'title' => 'Zoom*',
             'url' => 'http://www.amgroup.com.vn/',
             'created_at' => now(),
             'updated_at' => now(),

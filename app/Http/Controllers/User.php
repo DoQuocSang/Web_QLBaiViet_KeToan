@@ -35,7 +35,7 @@ class User extends Controller
        $data['remember_token']=$request->remember_token;               
 
         DB::table('tbl_user')->insert($data);
-        Session::put('message','Thêm người dùng thành công!');
+        Session::flash('success', 'Thêm người dùng thành công!');
         return Redirect::to ('all-user');
     }
     public function update_user(Request $request,$user_id){
@@ -45,10 +45,12 @@ class User extends Controller
         $data['password'] = $request->password; 
         $data['remember_token']=$request->remember_token;
         DB::table('tbl_user')->where('id',$user_id)->update($data);
+        Session::flash('success', 'Cập nhật người dùng thành công!');
         return Redirect::to ('all-user');
     }
     public function delete_user(Request $request,$user_id){
         DB::table('tbl_user')->where('id',$user_id)->delete();
+        Session::flash('success', 'Xóa người dùng thành công!');
         return Redirect::to ('all-user');
     }
 }

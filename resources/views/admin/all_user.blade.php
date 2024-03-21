@@ -1,10 +1,26 @@
 @extends('admin_layout')
 @section('admin_content')
-
+@if(Session::has('error'))
+    <div class="alert alert-danger">
+        {{ Session::get('error') }}
+    </div>
+@endif
+@if(Session::has('success'))
+    <div class="alert alert-success">
+        {{ Session::get('success') }}
+    </div>
+@endif
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox">
             <div class="ibox-content">
+            <?php
+                    $message = Session::get('message');
+                    if ($message){
+                        echo '<span class="text-alert">'.$message.'</span>';
+                        Session::put('message',null);
+                    }
+                ?>
                 <h2>Danh sách người dùng</h2>
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -36,6 +52,7 @@
                     </table>
                 </div>
             </div>
+        <button onclick="window.location='{{URL::to('/add-user')}}'" class="btn btn-primary">Thêm người dùng mới</button>
         </div>
     </div>
 </div>
