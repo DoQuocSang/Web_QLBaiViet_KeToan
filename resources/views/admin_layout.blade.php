@@ -78,11 +78,11 @@
                      
                         </ul>
                     </li>
-                    <li>
+                    <li class="{{ strpos(Request::url(), 'post-detail') !== false ? 'active' : '' }}">
                         <a href="#"><i class="fa fa-file-text"></i> <span class="nav-label">Bài viết</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
+                            <li><a href={{URL::to('/all-post-detail')}}>Danh sách</a></li>
+                            <li><a href={{URL::to('/add-post-detail')}}>Thêm mới</a></li>
                         </ul>
                     </li>
                     <li class="{{ strpos(Request::url(), 'category') !== false ? 'active' : '' }}">

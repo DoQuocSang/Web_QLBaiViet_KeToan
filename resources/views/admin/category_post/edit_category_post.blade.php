@@ -48,7 +48,7 @@
                             ?>
                             <div class="panel-body">
                                 @foreach($edit_category_post as $key => $edit_value)
-                                <form action={{(URL::to("/update-category-post/".$edit_value->id))}} method="POST">
+                                <form action={{(URL::to("/update-category-post/".$edit_value->category_id))}} method="POST">
                                     {{ csrf_field() }}
                                 <fieldset>
                                     <div class="form-group row"><label class="col-sm-2 col-form-label">Tên loại:</label>

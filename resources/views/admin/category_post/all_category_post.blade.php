@@ -27,7 +27,7 @@
         <div class="col-sm-4">
             <div class="form-group">
                 <label class="col-form-label" for="product_name">Tên thể loại</label>
-                <input type="text" id="product_name" name="product_name" value="" placeholder="Product Name" class="form-control">
+                <input type="text" id="product_name" name="product_name" value="" placeholder="Nhập tên thể loại" class="form-control">
             </div>
         </div>
         <div class="col-sm-4">
@@ -84,13 +84,13 @@
                                 <?php
                                 if($cate_item->category_status == 0){
                               ?>
-                                  <a href="{{URL::to('/active-category-post/'.$cate_item->id)}}">
+                                  <a href="{{URL::to('/active-category-post/'.$cate_item->category_id)}}">
                                     <span class="label label-danger">Ẩn</span>
                                     </a>
                               <?php
                                 }else{
                               ?>
-                                  <a href="{{URL::to('/unactive-category-post/'.$cate_item->id)}}">
+                                  <a href="{{URL::to('/unactive-category-post/'.$cate_item->category_id)}}">
                                     <span class="label label-primary">Hiển thị</span>
                                 </a>
                               <?php
@@ -99,11 +99,11 @@
                         </td>
                         <td class="text-right">
                             <div class="btn-group">
-                                <a onclick="return confirm('Bạn có chắc chắn là muốn xóa thể loại này không?')" href="{{URL::to('/delete-category-post/'.$cate_item->id)}}" class="btn-white btn btn-xs">
-                                    Xóa
-                                </a>
-                                <a href="{{URL::to('/edit-category-post/'.$cate_item->id)}}" class="btn-white btn btn-xs">
+                                <a href="{{URL::to('/edit-category-post/'.$cate_item->category_id)}}" class="btn-white btn btn-xs">
                                     Sửa
+                                </a>
+                                <a onclick="return confirm('Bạn có chắc chắn là muốn xóa thể loại này không?')" href="{{URL::to('/delete-category-post/'.$cate_item->category_id)}}" class="btn-white btn btn-xs">
+                                    Xóa
                                 </a>
                             </div>
                         </td>
