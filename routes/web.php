@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\User;
-
+use App\Http\Controllers\SupportLink;
 
 //Frontend
 Route::get('/', [HomeController::class, 'index']);
@@ -25,4 +25,10 @@ Route::get('/delete-user/{id}', [User::class, 'delete_user']);
 
 Route::post('/save-user', [User::class, 'save_user']);
 Route::post('/update-user/{id}', [User::class, 'update_user']);
+
+//Link
+Route::get('/all-link', [SupportLink::class, 'all_link']);
+Route::get('/add-link', [SupportLink::class, 'add_link']);
+
+
 

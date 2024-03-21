@@ -102,9 +102,8 @@
                     <li>
                         <a href="#"><i class="fa fa-link"></i> <span class="nav-label">Link hỗ trợ</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
-                            <li><a href="ecommerce_product.html">Chỉnh sửa</a></li>
+                            <li><a href="{{URL::to('/all-link')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-link')}}">Thêm mới</a></li>
                         </ul>
                     </li>
                 </ul>
