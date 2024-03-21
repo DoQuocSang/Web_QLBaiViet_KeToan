@@ -8,11 +8,11 @@
 
     <title>INSPINIA | Dashboard v.2</title>
 
-    <link href={{ 'public/backend/css/bootstrap.min.css' }} rel="stylesheet">
-    <link href={{ 'public/backend/font-awesome/css/font-awesome.css' }} rel="stylesheet">
+    <link href={{ asset('public/backend/css/bootstrap.min.css') }} rel="stylesheet">
+    <link href={{ asset('public/backend/font-awesome/css/font-awesome.css') }} rel="stylesheet">
 
-    <link href={{ 'public/backend/css/animate.css' }} rel="stylesheet">
-    <link href={{ 'public/backend/css/style.css' }} rel="stylesheet">
+    <link href={{ asset('public/backend/css/animate.css') }} rel="stylesheet">
+    <link href={{ asset('public/backend/css/style.css') }} rel="stylesheet">
 
 </head>
 
@@ -23,7 +23,7 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
-                            <img alt="image" class="rounded-circle" src={{("public/backend/img/profile_small.jpg")}} />
+                            <img alt="image" class="rounded-circle" src={{asset("public/backend/img/profile_small.jpg")}} />
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="block m-t-xs font-bold">
                                 <?php
@@ -65,7 +65,6 @@
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{URL::to('/all-user')}}">Danh sách</a></li>
                             <li><a href="{{URL::to('/add-user')}}">Thêm mới</a></li>
-                            <li><a href="ecommerce_product.html">Chỉnh sửa</a></li>
                         </ul>
                     </li>
                     <li>
@@ -185,44 +184,44 @@
     </div>
 
     <!-- Mainly scripts -->
-    <script src={{ 'public/backend/js/jquery-3.1.1.min.js' }}></script>
-    <script src={{ 'public/backend/js/popper.min.js' }}></script>
-    <script src={{ 'public/backend/js/bootstrap.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/metisMenu/jquery.metisMenu.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/slimscroll/jquery.slimscroll.min.js' }}></script>
+    <script src={{ asset('public/backend/js/jquery-3.1.1.min.js') }}></script>
+    <script src={{ asset('public/backend/js/popper.min.js') }}></script>
+    <script src={{ asset('public/backend/js/bootstrap.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/metisMenu/jquery.metisMenu.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/slimscroll/jquery.slimscroll.min.js') }}></script>
 
     <!-- Flot -->
-    <script src={{ 'public/backend/js/plugins/flot/jquery.flot.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/flot/jquery.flot.tooltip.min.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/flot/jquery.flot.spline.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/flot/jquery.flot.resize.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/flot/jquery.flot.pie.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/flot/jquery.flot.symbol.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/flot/jquery.flot.time.js' }}></script>
+    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.tooltip.min.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.spline.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.resize.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.pie.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.symbol.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.time.js') }}></script>
 
     <!-- Peity -->
-    <script src={{ 'public/backend/js/plugins/peity/jquery.peity.min.js' }}></script>
-    <script src={{ 'public/backend/js/demo/peity-demo.js' }}></script>
+    <script src={{ asset('public/backend/js/plugins/peity/jquery.peity.min.js') }}></script>
+    <script src={{ asset('public/backend/js/demo/peity-demo.js') }}></script>
 
     <!-- Custom and plugin javascript -->
-    <script src={{ 'public/backend/js/inspinia.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/pace/pace.min.js' }}></script>
+    <script src={{ asset('public/backend/js/inspinia.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/pace/pace.min.js') }}></script>
 
     <!-- jQuery UI -->
-    <script src={{ 'public/backend/js/plugins/jquery-ui/jquery-ui.min.js' }}></script>
+    <script src={{ asset('public/backend/js/plugins/jquery-ui/jquery-ui.min.js') }}></script>
 
     <!-- Jvectormap -->
-    <script src={{ 'public/backend/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js' }}></script>
-    <script src={{ 'public/backend/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' }}></script>
+    <script src={{ asset('public/backend/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js') }}></script>
+    <script src={{ asset('public/backend/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}></script>
 
     <!-- EayPIE -->
-    <script src={{ 'public/backend/js/plugins/easypiechart/jquery.easypiechart.js' }}></script>
+    <script src={{ asset('public/backend/js/plugins/easypiechart/jquery.easypiechart.js') }}></script>
 
     <!-- Sparkline -->
-    <script src={{ 'public/backend/js/plugins/sparkline/jquery.sparkline.min.js' }}></script>
+    <script src={{ asset('public/backend/js/plugins/sparkline/jquery.sparkline.min.js') }}></script>
 
     <!-- Sparkline demo data  -->
-    <script src={{ 'public/backend/js/demo/sparkline-demo.js' }}></script>
+    <script src={{ asset('public/backend/js/demo/sparkline-demo.js') }}></script>
 
     <script>
         $(document).ready(function() {

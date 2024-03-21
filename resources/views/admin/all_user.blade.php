@@ -1,5 +1,6 @@
 @extends('admin_layout')
 @section('admin_content')
+
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox">
@@ -27,7 +28,7 @@
                                 <td>{{ $user->remember_token }}</td>
                                 <td>
                                     <a href="{{ URL::to('/edit-user/' . $user->id) }}" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> </a>
-                                    <a href="{{ URL::to('/delete-user/' . $user->id) }}"class="btn btn-xs btn-danger"><i class="fa fa-trash"></i> </a>
+                                    <a onclick ="return confirm('Bạn có chắc muốn xóa người dùng này?')" href="{{ URL::to('/delete-user/' . $user->id) }}"class="btn btn-xs btn-danger"><i class="fa fa-trash"></i> </a>
                                 </td>
                             </tr>
                            @endforeach

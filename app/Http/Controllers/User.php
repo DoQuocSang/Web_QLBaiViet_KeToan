@@ -47,4 +47,8 @@ class User extends Controller
         DB::table('tbl_user')->where('id',$user_id)->update($data);
         return Redirect::to ('all-user');
     }
+    public function delete_user(Request $request,$user_id){
+        DB::table('tbl_user')->where('id',$user_id)->delete();
+        return Redirect::to ('all-user');
+    }
 }
