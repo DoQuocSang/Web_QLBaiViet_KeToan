@@ -9,15 +9,15 @@
     <!-- favicon CSS -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <!-- fonts -->
-    <link href={{("public/frontend/fonts/sfuidisplay.css")}} rel="stylesheet">
+    <link href={{asset("public/frontend/fonts/sfuidisplay.css")}} rel="stylesheet">
     <!-- Icon fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href={{("public/frontend/css/plugins.min.css")}}>
+    <link rel="stylesheet" href={{asset("public/frontend/css/plugins.min.css")}}>
     <!-- Style CSS -->
-    <link rel="stylesheet" href={{("public/frontend/css/app.css")}}>
+    <link rel="stylesheet" href={{asset("public/frontend/css/app.css")}}>
     <!-- Your CSS -->
-    <link rel="stylesheet" href={{("public/frontend/css/custom.css")}}>
+    <link rel="stylesheet" href={{asset("public/frontend/css/custom.css")}}>
 
 </head>
 
@@ -48,8 +48,8 @@
         <header class="navbar navbar-sticky navbar-expand-lg navbar-light">
             <div class="container position-relative">
                 <a class="navbar-brand" href={{URL::to('/home')}}>
-                    <img class="navbar-brand__regular" src={{("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
-                    <img class="navbar-brand__sticky" src={{("public/frontend/img/brand-logo-black.png")}} alt="sticky brand-logo">
+                    <img class="navbar-brand__regular" src={{asset("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
+                    <img class="navbar-brand__sticky" src={{asset("public/frontend/img/brand-logo-black.png")}} alt="sticky brand-logo">
                 </a>
                 <!--  End of brand logo -->
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
@@ -183,7 +183,7 @@
                     <div class="col-12 col-md-9 col-lg-4 mb-4 mb-xl-0">
                         <div class="pr-xl-3">
                             <span class="mb-3">
-                                    <img src={{("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
+                                    <img src={{asset("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
                                 </span>
                             <p class="mb-1">The main objectives of the project are to meet the needs of cryptocurrency projects and users, and to provide access to investment product.</p>
                             <p>© SpaceMax, 2018.</p>
@@ -249,8 +249,8 @@
         <!-- =========== End of Footer ============ -->
     </main>
 
-    <script src={{("public/frontend/js/plugins.min.js")}}></script>
-    <script src={{("public/frontend/js/app.js")}}></script>
+    <script src={{asset("public/frontend/js/plugins.min.js")}}></script>
+    <script src={{asset("public/frontend/js/app.js")}}></script>
 
 </body>
 
