@@ -51,9 +51,9 @@
     </div>
 
     <!-- Mainly scripts -->
-    <script src={{("public/backend/js/jquery-3.1.1.min.js")}}></script>
-    <script src={{("public/backend/js/popper.min.js")}}></script>
-    <script src={{("public/backend/js/bootstrap.js")}}></script>
+    <script src={{asset("public/backend/js/jquery-3.1.1.min.js")}}></script>
+    <script src={{asset("public/backend/js/popper.min.js")}}></script>
+    <script src={{asset("public/backend/js/bootstrap.js")}}></script>
 
 </body>
 

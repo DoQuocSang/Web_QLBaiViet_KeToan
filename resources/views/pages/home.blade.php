@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="hero__image jsElement" data-pull="-35">
-                        <picture><img src={{ 'public/frontend/img/illustration-25.png' }} alt="hero-image"
+                        <picture><img src={{asset('public/frontend/img/illustration-25.png')}} alt="hero-image"
                                 class="img-fluid"></picture>
                     </div>
                 </div>
@@ -52,15 +52,15 @@
             <div class="row mb-1">
                 <div
                     class="col-12 col-lg-9 mx-auto flex-wrap d-flex justify-content-center justify-content-lg-between align-items-center reveal">
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-1.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-1.png')}}
                             alt="customer-logo"></span>
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-2.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-2.png')}}
                             alt="customer-logo"></span>
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-3.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-3.png')}}
                             alt="customer-logo"></span>
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-4.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-4.png')}}
                             alt="customer-logo"></span>
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-5.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-5.png')}}
                             alt="customer-logo"></span>
                 </div>
                 <!-- end of col -->
@@ -69,15 +69,15 @@
             <div class="row">
                 <div
                     class="col-12 col-lg-10 mx-auto flex-wrap d-flex justify-content-center justify-content-lg-between align-items-center reveal">
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-6.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-6.png')}}
                             alt="customer-logo"></span>
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-7.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-7.png')}}
                             alt="customer-logo"></span>
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-8.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-8.png')}}
                             alt="customer-logo"></span>
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-9.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-9.png')}}
                             alt="customer-logo"></span>
-                    <span class="m-2"><img src={{ 'public/frontend/img/customer-logo-10.png' }}
+                    <span class="m-2"><img src={{asset('public/frontend/img/customer-logo-10.png')}}
                             alt="customer-logo"></span>
                 </div>
                 <!-- end of col -->
@@ -94,7 +94,7 @@
             <div class="row card--v1">
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
                     <div class="card card-hover--shadow p-3 p-md-2 p-lg-4 rounded--none h-100">
-                        <span class="mb-3"><img src={{ 'public/frontend/img/icon-device.svg' }}
+                        <span class="mb-3"><img src={{asset('public/frontend/img/icon-device.svg')}}
                                 alt="icon-device"></span>
                         <h3 class="font-size--20 mb-2">Optimized for Any Device</h3>
                         <p class="font-size--15">No matter what device it is. Each of our themes is natively responsive,
@@ -105,7 +105,7 @@
                 <!-- end of col -->
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
                     <div class="card card-hover--shadow p-3 p-md-2 p-lg-4 rounded--none h-100">
-                        <span class="mb-3"><img src={{ 'public/frontend/img/icon-assets.svg' }}
+                        <span class="mb-3"><img src={{asset('public/frontend/img/icon-assets.svg')}}
                                 alt="icon-assets"></span>
                         <h3 class="font-size--20 mb-2">Thousands of Fonts & Icons</h3>
                         <p class="font-size--15">We have thousands of font options included our custom fonts as well as all
@@ -116,7 +116,7 @@
                 <!-- end of col -->
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
                     <div class="card card-hover--shadow p-3 p-md-2 p-lg-4 rounded--none h-100">
-                        <span class="mb-3"><img src={{ 'public/frontend/img/icon-secure.svg' }}
+                        <span class="mb-3"><img src={{asset('public/frontend/img/icon-secure.svg')}}
                                 alt="icon-secure"></span>
                         <h3 class="font-size--20 mb-2">Highly Secured Platform</h3>
                         <p class="font-size--15">Security on the web was never been easy. SpaceMax protects your data with
@@ -145,7 +145,7 @@
                 <!-- end of col -->
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
                     <div class="card card-hover--shadow p-3 p-md-2 p-lg-4 rounded--none h-100">
-                        <span class="mb-3"><img src={{ 'public/frontend/img/icon-ecommerce.svg' }}
+                        <span class="mb-3"><img src={{asset('public/frontend/img/icon-ecommerce.svg')}}
                                 alt="icon-ecommerce"></span>
                         <h3 class="font-size--20 mb-2">e-Commerce Integration</h3>
                         <p class="font-size--15">Each of our themes is natively supported e-commerce features. The
@@ -162,7 +162,7 @@
     <!-- =========== Start of Templates ============ -->
     <section class="space bg-color--primary-light--1 hidden">
         <div class="background-holder background--top--left">
-            <img src={{ 'public/frontend/img/layout/wave-17.png' }} alt="wave" class="background-image-holder">
+            <img src={{asset('public/frontend/img/layout/wave-17.png')}} alt="wave" class="background-image-holder">
         </div>
         <!-- end of top bg overlay -->
         <div class="container">
@@ -181,16 +181,16 @@
                 <div class="col-12 col-lg-7">
                     <div class="carosuel-slider--v1">
                         <a href="#" class="slide position-relative">
-                            <img src={{ 'public/frontend/img/carosuel-slider-img-6.1.png' }} alt="carosuel-slider-img">
+                            <img src={{asset('public/frontend/img/carosuel-slider-img-6.1.png')}} alt="carosuel-slider-img">
                         </a>
                         <a href="#" class="slide">
-                            <img src={{ 'public/frontend/img/carosuel-slider-img-6.1.png' }} alt="carosuel-slider-img">
+                            <img src={{asset('public/frontend/img/carosuel-slider-img-6.1.png')}} alt="carosuel-slider-img">
                         </a>
                         <a href="#" class="slide">
-                            <img src={{ 'public/frontend/img/carosuel-slider-img-6.1.png' }} alt="carosuel-slider-img">
+                            <img src={{asset('public/frontend/img/carosuel-slider-img-6.1.png')}} alt="carosuel-slider-img">
                         </a>
                         <a href="#" class="slide">
-                            <img src={{ 'public/frontend/img/carosuel-slider-img-6.1.png' }} alt="carosuel-slider-img">
+                            <img src={{asset('public/frontend/img/carosuel-slider-img-6.1.png')}} alt="carosuel-slider-img">
                         </a>
                     </div>
                 </div>
@@ -204,7 +204,7 @@
     <!-- =========== Start of customer website ============ -->
     <section class="space--top pb-4 pb-lg-0">
         <div class="background-holder background--top mt-5">
-            <img src={{ 'public/frontend/img/layout/bg-overlay-29.png' }} alt="wave"
+            <img src={{asset('public/frontend/img/layout/bg-overlay-29.png')}} alt="wave"
                 class="background-image-holder">
         </div>
         <!-- end of bg overlay -->
@@ -241,7 +241,7 @@
                                         </a>
                                     </div>
                                     <span>
-                                        <img src={{ 'public/frontend/img/customer-website-1.jpg' }}
+                                        <img src={{asset('public/frontend/img/customer-website-1.jpg')}}
                                             alt="customer-website" class="img-fluid">
                                     </span>
                                 </div>
@@ -261,7 +261,7 @@
                                         </a>
                                     </div>
                                     <span>
-                                        <img src={{ 'public/frontend/img/customer-website-2.jpg' }}
+                                        <img src={{asset('public/frontend/img/customer-website-2.jpg')}}
                                             alt="customer-website" class="img-fluid">
                                     </span>
                                 </div>
@@ -281,7 +281,7 @@
                                         </a>
                                     </div>
                                     <span>
-                                        <img src={{ 'public/frontend/img/customer-website-3.jpg' }}
+                                        <img src={{asset('public/frontend/img/customer-website-3.jpg')}}
                                             alt="customer-website" class="img-fluid">
                                     </span>
                                 </div>
@@ -301,7 +301,7 @@
                                         </a>
                                     </div>
                                     <span>
-                                        <img src={{ 'public/frontend/img/customer-website-4.jpg' }}
+                                        <img src={{asset('public/frontend/img/customer-website-4.jpg')}}
                                             alt="customer-website" class="img-fluid">
                                     </span>
                                 </div>
@@ -323,11 +323,11 @@
     <!-- =========== Start of Testimonial ============ -->
     <section class="space bg-color--primary-light--1 testimonials--v1 jsElement" data-pull="-130">
         <div class="svg-shape--top w-100 z-index1">
-            <img src={{ 'public/frontend/img/layout/wave-18.svg' }} alt="wave" class="svg w-100 ">
+            <img src={{asset('public/frontend/img/layout/wave-18.svg')}} alt="wave" class="svg w-100 ">
         </div>
         <!-- end of svg shape bottom -->
         <div class="background-holder background--top--left">
-            <img src={{ 'public/frontend/img/layout/wave-20.svg' }} alt="wave"
+            <img src={{asset('public/frontend/img/layout/wave-20.svg')}} alt="wave"
                 class="background-image-holder h-100">
         </div>
         <!-- end of top bg shape -->
@@ -347,7 +347,7 @@
                     <div class="carosuel-slider--v2 bg-white box-shadow--5 p-3 py-lg-5 pl-lg-4 pr-lg-10">
                         <div class="slide">
                             <div class="d-flex align-items-start mb-2">
-                                <span class="mr-2 rounded--full"><img src={{ 'public/frontend/img/avatar-1.png' }}
+                                <span class="mr-2 rounded--full"><img src={{asset('public/frontend/img/avatar-1.png')}}
                                         class="rounded--full" alt="avatar"></span>
                                 <div class="d-flex flex-column">
                                     <span class="client-name font-size--10 font-w--600">Loretta Paul</span>
@@ -376,7 +376,7 @@
                         <!-- end of single item -->
                         <div class="slide">
                             <div class="d-flex align-items-start mb-2">
-                                <span class="mr-2 rounded--full"><img src={{ 'public/frontend/img/avatar-2.png' }}
+                                <span class="mr-2 rounded--full"><img src={{asset('public/frontend/img/avatar-2.png')}}
                                         class="rounded--full" alt="avatar"></span>
                                 <div class="d-flex flex-column">
                                     <span class="client-name font-size--10 font-w--600">Jimmy Griffin</span>
@@ -405,7 +405,7 @@
                         <!-- end of single item -->
                         <div class="slide">
                             <div class="d-flex align-items-start mb-2">
-                                <span class="mr-2 rounded--full"><img src={{ 'public/frontend/img/avatar-3.png' }}
+                                <span class="mr-2 rounded--full"><img src={{asset('public/frontend/img/avatar-3.png')}}
                                         class="rounded--full" alt="avatar"></span>
                                 <div class="d-flex flex-column">
                                     <span class="client-name font-size--10 font-w--600">Alan Rogers</span>
@@ -457,11 +457,11 @@
                 <!-- end of content col -->
                 <div class="col-12 col-lg-5 col-xl-6">
                     <picture class="overlap-image__main">
-                        <img class="img-fluid box-shadow--5" src={{ 'public/frontend/img/content-block-img-1.1.png' }}
+                        <img class="img-fluid box-shadow--5" src={{asset('public/frontend/img/content-block-img-1.1.png')}}
                             alt="content-block-img">
                     </picture>
                     <picture class="overlap-image__secondary pos-abs-bottom-right">
-                        <img class="img-fluid box-shadow--5" src={{ 'public/frontend/img/content-block-img-1.2.png' }}
+                        <img class="img-fluid box-shadow--5" src={{asset('public/frontend/img/content-block-img-1.2.png')}}
                             alt="content-block-img">
                     </picture>
                 </div>
@@ -487,10 +487,10 @@
                 <div class="col-12 col-lg-5 col-xl-6">
                     <picture class="overlap-image__main text-right">
                         <img class="img-fluid box-shadow--5 w-85"
-                            src={{ 'public/frontend/img/content-block-img-2.1.png' }} alt="content-block-img">
+                            src={{asset('public/frontend/img/content-block-img-2.1.png')}} alt="content-block-img">
                     </picture>
                     <picture class="overlap-image__secondary pos-abs-vertical-center pos-abs-left">
-                        <img class="img-fluid box-shadow--5" src={{ 'public/frontend/img/content-block-img-2.2.png' }}
+                        <img class="img-fluid box-shadow--5" src={{asset('public/frontend/img/content-block-img-2.2.png')}}
                             alt="content-block-img">
                     </picture>
                 </div>
@@ -504,7 +504,7 @@
     <!-- =========== Start of Help Center ============ -->
     <section class="space bg-color--primary-light--1">
         <div class="background-holder background--bottom opacity--08">
-            <img src={{ 'public/frontend/img/layout/city.svg' }} alt="wave" class="background-image-holder">
+            <img src={{asset('public/frontend/img/layout/city.svg')}} alt="wave" class="background-image-holder">
         </div>
         <!-- end of top bg shape -->
 
