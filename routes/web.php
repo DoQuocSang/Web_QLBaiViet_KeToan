@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryPost;
+use App\Http\Controllers\InfoPostController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -40,3 +41,15 @@ Route::get('/unactive-post-detail/{post_id}', [PostController::class, 'unactive_
 
 Route::post('/save-post-detail', [PostController::class, 'save_post']);
 Route::post('/update-post-detail/{post_id}', [PostController::class, 'update_post']);
+
+//Info Post
+Route::get('/all-info-post', [InfoPostController::class, 'all_info_post']);
+Route::get('/add-info-post', [InfoPostController::class, 'add_info_post']);
+Route::get('/edit-info-post/{info_post_id}', [InfoPostController::class, 'edit_info_post']);
+Route::get('/delete-info-post/{info_post_id}', [InfoPostController::class, 'delete_info_post']);
+
+Route::get('/active-info-post/{info_post_id}', [InfoPostController::class, 'active_info_post']);
+Route::get('/unactive-info-post/{info_post_id}', [InfoPostController::class, 'unactive_info_post']);
+
+Route::post('/save-info-post', [InfoPostController::class, 'save_info_post']);
+Route::post('/update-info-post/{info_post_id}', [InfoPostController::class, 'update_info_post']);

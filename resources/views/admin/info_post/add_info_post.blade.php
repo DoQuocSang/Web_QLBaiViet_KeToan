@@ -3,16 +3,16 @@
 @section('admin_page_heading')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>Cập nhật bài viết</h2>
+            <h2>Thêm trang thông tin</h2>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href={{URL::to('/dashboard')}}>Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item">
-                     <a href={{URL::to('/all-post-detail')}}>Bài viết</a>
+                    <a href={{URL::to('/all-info-post')}}>Trang thông tin</a>
                 </li>
                 <li class="breadcrumb-item active">
-                    <strong>Cập nhật bài viết</strong>
+                    <strong>Thêm trang thông tin</strong>
                 </li>
             </ol>
         </div>
@@ -47,51 +47,47 @@
                             }
                             ?>
                             <div class="panel-body">
-                                @foreach($edit_post as $key => $edit_value)
-                                <form action={{ URL::to('/update-post-detail/'.$edit_value->post_id) }} method="POST">
+                                <form action={{ URL::to('/save-info-post') }} method="post">
                                     {{ csrf_field() }}
                                     <fieldset>
-                                        <div class="form-group row"><label class="col-sm-2 col-form-label">Số thứ tự:</label>
-                                            <div class="col-sm-10"><input name="post_index" type="number" value="{{$edit_value->post_index}}"
+                                        {{-- <div class="form-group row"><label class="col-sm-2 col-form-label">Số thứ tự:</label>
+                                            <div class="col-sm-10"><input name="info_post_index" type="number"
                                                     class="form-control" placeholder="Nhập số thứ tự hiển thị"></div>
-                                        </div>
-                                        <div class="form-group row"><label class="col-sm-2 col-form-label">Thể loại:</label>
-                                            <div class="col-sm-10">
-                                                <select name="category_id" class="form-control">
-                                                    <option value = "" selected>-- Chọn thể loại --</option>
-                                                    @foreach($cate_post as $key => $cate)
-                                                    @if($cate->category_id == $edit_value->category_id)
-                                                        <option selected value = "{{$cate->category_id}}">{{$cate->category_name}}</option>
-                                                    @else
-                                                        <option value = "{{$cate->category_id}}">{{$cate->category_name}}</option>
-                                                    @endif
-                                                @endforeach
-                                                </select>
-
-                                            </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group row"><label class="col-sm-2 col-form-label">Tiêu đề:</label>
-                                            <div class="col-sm-10"><input name="post_title" type="text" value="{{$edit_value->post_title}}"
+                                            <div class="col-sm-10"><input name="info_post_title" type="text"
                                                     class="form-control" placeholder="Nhập tiêu đề"></div>
                                         </div>
                                         {{-- <div class="form-group row"><label class="col-sm-2 col-form-label">Nội dung:</label>
-                                            <div class="col-sm-10"><textarea name="post_content" rows="5" class="form-control" placeholder="Nhập nội dung">{{$edit_value->post_content}}</textarea></div>
+                                            <div class="col-sm-10"><textarea name="info_post_content" rows="5" class="form-control" placeholder="Nhập nội dung"></textarea></div>
                                         </div> --}}
                                         <div class="form-group row"><label class="col-sm-2 col-form-label">Nội dung:</label>
                                             <div class="col-sm-10">
-                                                <textarea class="summernote" name="post_content">{{$edit_value->post_content}}</textarea>
+                                                <textarea class="summernote" name="info_post_content"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row"><label class="col-sm-2 col-form-label">Trạng thái:</label>
+                                            <div class="col-sm-10">
+                                                <select name="info_post_status" class="form-control m-b">
+                                                    <option value="1">Hiện</option>
+                                                    <option value="0">Ẩn</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row"><label class="col-sm-2 col-form-label"></label>
+                                            <div class="col-sm-10">
+                                                <div class="i-checks"><label> <input name="is_default" type="checkbox" value="checked"> <i></i> Trang mặc định </label></div>
                                             </div>
                                         </div>
                                         <div class="hr-line-dashed"></div>
                                         <div class="row">
                                             <div class="col-sm-4 col-sm-offset-2">
-                                                <a class="btn btn-white btn-sm" href={{ URL::to('/all-post-detail') }}>Quay lại</a>
-                                                <button class="btn btn-primary btn-sm" type="submit" name="edit_post">Lưu thay đổi</button>
+                                                <a class="btn btn-white btn-sm" href={{ URL::to('/all-info-post') }}>Quay lại</a>
+                                                <button class="btn btn-primary btn-sm" type="submit" name="add_info_post">Lưu thay đổi</button>
                                             </div>
                                         </div>
                                     </fieldset>
                                 </form>
-                                @endforeach
                             </div>
                         </div>
                         {{-- <div id="tab-2" class="tab-pane">
