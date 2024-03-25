@@ -234,6 +234,69 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (1, 'Test User', 'test@example.com', '2024-03-18 01:50:29', '$2y$12$R6sdab4VPE0SZI6EJXL.8ezSZyLXjd6l/Go4Vm0fTbLTwlMLTmD2K', 'tRihHkf28C', '2024-03-18 01:50:30', '2024-03-18 01:50:30');
 
 --
+-- Cấu trúc bảng cho bảng `tbl_menu`
+--
+
+CREATE TABLE `tbl_menu` (
+  `id_menu` bigint(20) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `menu_name` varchar(100) NOT NULL,
+  `menu_url` varchar(255) NOT NULL,
+  `menu_status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_menu`
+--
+
+INSERT INTO `tbl_menu` (`id_menu`, `menu_name`, `menu_url`, `menu_status`, `created_at`, `updated_at`) VALUES
+(1, 'Giới thiệu AMIS kế toán', 'gioi-thieu-amis-ke-toan', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(2, 'Hướng dẫn khai thác dữ liệu', 'huong-dan-khai-thac-du-lieu', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(3, 'Hướng dẫn nghiệp vụ', 'huong-dan-nghiep-vu', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(4, 'Đào tạo miễn phí', 'dao-tao-mien-phi', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(5, 'Kênh hỗ trợ', 'kenh-ho-tro', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_menu`
+--
+
+CREATE TABLE `tbl_sub_menu` (
+  `id_sub_menu` bigint(20) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id_parent` bigint(20) UNSIGNED,
+  `menu_sub_name` varchar(100) NOT NULL,
+  `menu_sub_url` varchar(255) NOT NULL,
+  `menu_sub_status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  FOREIGN KEY (id_parent) REFERENCES tbl_menu(id_menu)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_menu`
+--
+
+INSERT INTO `tbl_sub_menu` (`id_sub_menu`, `id_parent`, `menu_sub_name`, `menu_sub_url`, `menu_sub_status`,`created_at`, `updated_at`) VALUES
+(1, 3, 'Quy trình nghiệp vụ', 'quy-trinh-nghiep-vu', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(2, 3, '1. Tiền mặt', 'tien-mat', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(3, 3, '2. Tiền gửi', 'tien-gui', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(4, 3, '3. Mua hàng', 'mua-hang', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(5, 3, '4. Bán hàng', 'ban-hang', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(6, 3, '5. Quản lý hóa đơn', 'quan-ly-hoa-don', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(7, 3, '6. Kho', 'kho', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(8, 3, '7. CCDC', 'ccdc', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(9, 3, '8. TSCĐ', 'tscd', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(10, 3, '9. Nghiệp vụ khác', 'nghiep-vu-khac', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(11, 5, 'Cộng đồng hỗ trợ miễn phí qua facebook', 'cong-dong-ho-tro-mien-phi-qua-facebook', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(12, 5, 'Diễn đàn hỗ trợ MISA', 'dien-dan-ho-tro-misa', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(13, 5, 'Kênh video hỗ trợ qua youtube', 'kenh-ho-tro-qua-youtube', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(14, 5, 'Đào tạo/giải pháp trực tuyến qua zoom', 'dao-tao-giai-phap-truc-tuyen-qua-zoom', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22');
+
+-- --------------------------------------------------------
+
+--
 -- Chỉ mục cho các bảng đã đổ
 --
 

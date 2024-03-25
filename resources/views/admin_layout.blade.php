@@ -95,8 +95,9 @@
                     <li>
                         <a href="#"><i class="fa fa-caret-square-o-down"></i> <span class="nav-label">Menu hiển thị</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
+                            <li><a href="{{URL::to('/all-menu')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-menu')}}">Thêm mới menu</a></li>
+                            <li><a href="{{URL::to('/add-sub-menu')}}">Thêm mới menu con</a></li>
                         </ul>
                     </li>
                     <li>
