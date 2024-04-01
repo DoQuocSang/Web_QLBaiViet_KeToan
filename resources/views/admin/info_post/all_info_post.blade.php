@@ -3,16 +3,16 @@
 @section('admin_page_heading')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>Danh sách bài viết</h2>
+            <h2>Danh sách trang thông tin</h2>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href={{URL::to('/dashboard')}}>Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item">
-                     <a href={{URL::to('/all-post-detail')}}>Bài viết</a>
+                    <a href={{URL::to('/all-info-post')}}>Trang thông tint</a>
                 </li>
                 <li class="breadcrumb-item active">
-                    <strong>Danh sách bài viết</strong>
+                    <strong>Danh sách trang thông tin</strong>
                 </li>
             </ol>
         </div>
@@ -26,9 +26,9 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <label class="col-form-label" for="product_name">Tiêu đề bài viết</label>
+                        <label class="col-form-label" for="product_name">Tiêu đề trang thông tin</label>
                         <input type="text" id="product_name" name="product_name" value=""
-                            placeholder="Nhập tiêu đề bài viết" class="form-control">
+                            placeholder="Nhập tiêu đề trang thông tin" class="form-control">
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -62,8 +62,7 @@
                         <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
                             <thead>
                                 <tr>
-                                    <th data-toggle="true">Thứ tự hiển thị</th>
-                                    <th data-toggle="true">Thể loại</th>
+                                    {{-- <th data-toggle="true">Thứ tự hiển thị</th> --}}
                                     <th data-toggle="true">Tiêu đề</th>
                                     <th data-hide="all">Nội dung</th>
                                     <th data-toggle="true">Tác giả</th>
@@ -73,37 +72,34 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($all_post as $key => $item)
+                                @foreach ($all_info_post as $key => $item)
                                     <tr>
+                                        {{-- <td>
+                                            {{ $item->info_post_index }}
+                                        </td> --}}
                                         <td>
-                                            {{ $item->post_index }}
+                                            {{ $item->info_post_title }}
                                         </td>
                                         <td>
-                                            {{ $item->category_name }}
+                                            {!! $item->info_post_content !!}
                                         </td>
                                         <td>
-                                            {{ $item->post_title }}
-                                        </td>
-                                        <td>
-                                            {!! $item->post_content !!}
-                                        </td>
-                                        <td>
-                                            {{ $item->post_author }}
+                                            {{ $item->info_post_author }}
                                         </td>
                                         <td>
                                             {{ $item->created_at }}
                                         </td>
                                         <td>
                                             <?php
-                                                if($item->post_status == 0){
+                                                if($item->info_post_status == 0){
                                             ?>
-                                            <a href="{{ URL::to('/active-post-detail/' . $item->post_id) }}">
+                                            <a href="{{ URL::to('/active-info-post/' . $item->info_post_id) }}">
                                                 <span class="label label-danger">Ẩn</span>
                                             </a>
                                             <?php
                                                 }else{
                                             ?>
-                                            <a href="{{ URL::to('/unactive-post-detail/' . $item->post_id) }}">
+                                            <a href="{{ URL::to('/unactive-info-post/' . $item->info_post_id) }}">
                                                 <span class="label label-primary">Hiển thị</span>
                                             </a>
                                             <?php
@@ -112,15 +108,23 @@
                                         </td>
                                         <td class="text-right">
                                             <div class="btn-group">
-                                                <a href="{{ URL::to('/edit-post-detail/' . $item->post_id) }}"
+                                                <a href="{{ URL::to('/edit-info-post/' . $item->info_post_id) }}"
                                                     class="btn-white btn btn-xs">
                                                     Sửa
                                                 </a>
-                                                <a onclick="return confirm('Bạn có chắc chắn là muốn xóa bài viết này không?')"
-                                                    href="{{ URL::to('/delete-post-detail/' . $item->post_id) }}"
-                                                    class="btn-white btn btn-xs">
-                                                    Xóa
-                                                </a>
+
+                                                <?php
+                                                    if($item->is_default == false){
+                                                ?>
+                                                    <a onclick="return confirm('Bạn có chắc chắn là muốn xóa trang thông tin này không?')"
+                                                        href="{{ URL::to('/delete-info-post/' . $item->info_post_id) }}"
+                                                        class="btn-white btn btn-xs">
+                                                            Xóa
+                                                    </a>
+                                                <?php
+                                                    }
+                                                ?>
+                                          
                                             </div>
                                         </td>
                                     </tr>
