@@ -48,8 +48,7 @@
         <header class="navbar navbar-sticky navbar-expand-lg navbar-light">
             <div class="container position-relative">
                 <a class="navbar-brand" href={{URL::to('/home')}}>
-                    <img class="navbar-brand__regular" src={{asset("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
-                    <img class="navbar-brand__sticky" src={{asset("public/frontend/img/brand-logo-black.png")}} alt="sticky brand-logo">
+                    <img class="navbar-brand__regular" src={{asset("public/frontend/img/account_manager_image/ameinvoice.png")}} alt="brand-logo" style="width: 120px;">
                 </a>
                 <!--  End of brand logo -->
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
@@ -63,8 +62,28 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- end of Nav Toggoler -->
+                    <?php
+                        $menuController = new \App\Http\Controllers\MenuController();
+                        $all_active_menus = $menuController->getMenuActive();
+                    ?>
                     <nav>
                         <ul class="navbar-nav" id="navbar-nav">
+                            @foreach($all_active_menus as $menu)
+                                <?php $hasSubmenu = count($menu->submenus) > 0; ?>
+                                <li class="nav-item{{ $hasSubmenu ? ' dropdown' : '' }}">
+                                    <a class="nav-link{{ $hasSubmenu ? ' dropdown-toggle' : '' }}" href="{{ $hasSubmenu ? 'javascript:;' : $menu->menu_url }}" @if($hasSubmenu) data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @endif>
+                                        {{ $menu->menu_name }}
+                                        {{-- @if($hasSubmenu)
+                                            <span class="arrow" style="transform: translateX(200px);"></span>
+                                        @endif --}}
+                                    </a>
+                                    @if($hasSubmenu)
+                                        <ul class="dropdown-menu">
+                                            @foreach($menu->submenus as $submenu)
+                                                <li>
+                                                    <a class="dropdown-item" href="{{ $submenu->menu_sub_url }}">{{ $submenu->menu_sub_name }}</a>
+                                                </li>
+                                            @endforeach
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Landing Pages</a>
                                 <ul class="dropdown-menu">
@@ -152,23 +171,12 @@
                                                 <a class="dropdown-item" href="blog-details-sidebar-left.html">Blog Details Sidebar Left</a>
                                             </li>
                                         </ul>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="http://docs.tunerpixel.com/spacemax/">Documentation</a>
-                            </li>
-
+                                    @endif
+                                </li>
+                            @endforeach
                         </ul>
                         <!-- end of nav menu items -->
                     </nav>
-                </div>
-                <div class="d-flex align-items-center ml-lg-1 ml-xl-2 mr-4 mr-sm-6 m-lg-0">
-                    <a href="{{URL::to('/login')}}" class="color--primary font-w--600 mr-2 d-none d-sm-inline-block">Login</a>
-                    <a href="#" class="btn btn-size--md btn-bg--primary rounded--none btn-hover--3d">
-                        <span class="btn__text font-w--500">Purchase now</span>
-                    </a>
                 </div>
             </div>
             <!-- end of container -->
@@ -184,7 +192,7 @@
                     <div class="col-12 col-md-9 col-lg-4 mb-4 mb-xl-0">
                         <div class="pr-xl-3">
                             <span class="mb-3">
-                                    <img src={{asset("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
+                                <img class="navbar-brand__regular" src={{asset("public/frontend/img/account_manager_image/ameinvoice.png")}} alt="brand-logo" style="width: 120px;">
                                 </span>
                             <p class="mb-1">The main objectives of the project are to meet the needs of cryptocurrency projects and users, and to provide access to investment product.</p>
                             <p>© SpaceMax, 2018.</p>
