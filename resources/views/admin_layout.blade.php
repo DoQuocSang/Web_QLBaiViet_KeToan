@@ -10,8 +10,8 @@
 
     <link href={{asset('public/backend/css/bootstrap.min.css')}} rel="stylesheet">
     <link href={{asset('public/backend/font-awesome/css/font-awesome.css') }} rel="stylesheet">
-
     <link href={{asset("public/backend/css/plugins/summernote/summernote-bs4.css")}} rel="stylesheet">
+
 
     <link href={{asset("public/backend/css/plugins/datapicker/datepicker3.css")}} rel="stylesheet">
 
@@ -72,9 +72,9 @@
                     <li>
                         <a href="#"><i class="fa fa-user"></i><span class="nav-label">Người dùng</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
-                     
+                            <li><a href="{{URL::to('/all-user')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-user')}}">Thêm mới</a></li>
+
                         </ul>
                     </li>
                     <li class="{{ strpos(Request::url(), 'post-detail') !== false ? 'active' : '' }}">
@@ -94,8 +94,9 @@
                     <li>
                         <a href="#"><i class="fa fa-caret-square-o-down"></i> <span class="nav-label">Menu hiển thị</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
+                            <li><a href="{{URL::to('/all-menu')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-menu')}}">Thêm mới menu</a></li>
+                            <li><a href="{{URL::to('/add-sub-menu')}}">Thêm mới menu con</a></li>
                         </ul>
                     </li>
                     <li class="{{ strpos(Request::url(), 'info-post') !== false ? 'active' : '' }}">
@@ -108,8 +109,8 @@
                     <li>
                         <a href="#"><i class="fa fa-link"></i> <span class="nav-label">Link hỗ trợ</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
+                            <li><a href="{{URL::to('/all-link')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-link')}}">Thêm mới</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -192,6 +193,7 @@
     </div>
 
     <!-- Mainly scripts -->
+    
     <script src={{asset('public/backend/js/jquery-3.1.1.min.js')}}></script>
     <script src={{asset('public/backend/js/popper.min.js')}}></script>
     <script src={{asset('public/backend/js/bootstrap.js')}}></script>
