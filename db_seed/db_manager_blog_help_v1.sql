@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 20, 2024 lúc 10:47 AM
+-- Thời gian đã tạo: Th3 22, 2024 lúc 03:16 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -117,7 +117,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (10, '0001_01_01_000001_create_cache_table', 1),
 (11, '0001_01_01_000002_create_jobs_table', 1),
 (12, '2024_03_18_083018_create_tbl_admin_table', 1),
-(13, '2024_03_20_060952_create_tbl_category_post', 2);
+(13, '2024_03_20_060952_create_tbl_category_post', 2),
+(14, '2024_03_21_012627_create_tbl_post', 3),
+(15, '2024_03_22_020558_create_tbl_info_post', 4),
+(16, '2024_03_22_021104_create_tbl_info_post', 5);
 
 -- --------------------------------------------------------
 
@@ -151,7 +154,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('NzgSWKDO2jF5Mp6yBUBuVj66HRhxCMf65WhUVDo8', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiWmRzdXdZVXdlUlZGYkl0VTRNU1B4R1piQWkwWXVTODhhNTdzeWNrQSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NjQ6Imh0dHA6Ly9sb2NhbGhvc3QvVGFpTGlldTQvV2ViX1FMQmFpVmlldF9LZVRvYW4vYWxsLWNhdGVnb3J5LXBvc3QiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjE0OiJhZG1pbl91c2VybmFtZSI7czo2OiJzYW5nZHEiO3M6MTA6ImFkbWluX25hbWUiO3M6MTc6IsSQ4buXIFF14buRYyBTYW5nIjtzOjE0OiJhZG1pbl9wYXNzd29yZCI7czozMjoiYzRjYTQyMzhhMGI5MjM4MjBkY2M1MDlhNmY3NTg0OWIiO3M6MTA6ImFkbWluX3JvbGUiO2k6MTtzOjc6Im1lc3NhZ2UiO047fQ==', 1710928016);
+('4ddsSyrKCop1JbsxT6yKt6vNnHmOelLyxWracOeA', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiWXpQeUN5cDZVM1lVajdIbU1oeG5EZkREaDZTTlpTZks3d21ZeTQ2bSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NjI6Imh0dHA6Ly9sb2NhbGhvc3QvVGFpTGlldTQvV2ViX1FMQmFpVmlldF9LZVRvYW4vYWxsLXBvc3QtZGV0YWlsIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxNDoiYWRtaW5fdXNlcm5hbWUiO3M6Njoic2FuZ2RxIjtzOjEwOiJhZG1pbl9uYW1lIjtzOjE3OiLEkOG7lyBRdeG7kWMgU2FuZyI7czoxNDoiYWRtaW5fcGFzc3dvcmQiO3M6MzI6ImM0Y2E0MjM4YTBiOTIzODIwZGNjNTA5YTZmNzU4NDliIjtzOjEwOiJhZG1pbl9yb2xlIjtpOjE7czo3OiJtZXNzYWdlIjtOO30=', 1711003133),
+('Rjg2JBimqA2NBGZ6guiqcMvVUz3K1Ml9WfaAH5RD', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoidHpSZTFHdHdtSjc2bUo0VlNVTnY0OUZJMVBTRW5FdGZXNkYxVTZoSiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTY6Imh0dHA6Ly9sb2NhbGhvc3QvVGFpTGlldTQvV2ViX1FMQmFpVmlldF9LZVRvYW4vZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxNDoiYWRtaW5fdXNlcm5hbWUiO3M6Njoic2FuZ2RxIjtzOjEwOiJhZG1pbl9uYW1lIjtzOjE3OiLEkOG7lyBRdeG7kWMgU2FuZyI7czoxNDoiYWRtaW5fcGFzc3dvcmQiO3M6MzI6ImM0Y2E0MjM4YTBiOTIzODIwZGNjNTA5YTZmNzU4NDliIjtzOjEwOiJhZG1pbl9yb2xlIjtpOjE7fQ==', 1711071174);
 
 -- --------------------------------------------------------
 
@@ -160,7 +164,7 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 --
 
 CREATE TABLE `tbl_admin` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `admin_id` bigint(20) UNSIGNED NOT NULL,
   `admin_name` varchar(100) NOT NULL,
   `admin_username` varchar(100) NOT NULL,
   `admin_email` varchar(100) NOT NULL,
@@ -174,7 +178,7 @@ CREATE TABLE `tbl_admin` (
 -- Đang đổ dữ liệu cho bảng `tbl_admin`
 --
 
-INSERT INTO `tbl_admin` (`id`, `admin_name`, `admin_username`, `admin_email`, `admin_password`, `admin_role`, `created_at`, `updated_at`) VALUES
+INSERT INTO `tbl_admin` (`admin_id`, `admin_name`, `admin_username`, `admin_email`, `admin_password`, `admin_role`, `created_at`, `updated_at`) VALUES
 (1, 'Đỗ Quốc Sang', 'sangdq', 'sangadmin@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 1, '2024-03-18 08:50:42', '2024-03-18 08:50:42'),
 (2, 'Huy Đào', 'huydq', 'huydq@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 0, '2024-03-18 09:31:22', '2024-03-18 09:31:22'),
 (3, 'Trang Phạm', 'trangpth', 'trangpth@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 0, '2024-03-18 09:31:22', '2024-03-18 09:31:22');
@@ -186,7 +190,7 @@ INSERT INTO `tbl_admin` (`id`, `admin_name`, `admin_username`, `admin_email`, `a
 --
 
 CREATE TABLE `tbl_category_post` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `category_id` bigint(20) UNSIGNED NOT NULL,
   `category_name` varchar(100) NOT NULL,
   `category_desc` text NOT NULL,
   `category_status` int(11) NOT NULL,
@@ -198,7 +202,7 @@ CREATE TABLE `tbl_category_post` (
 -- Đang đổ dữ liệu cho bảng `tbl_category_post`
 --
 
-INSERT INTO `tbl_category_post` (`id`, `category_name`, `category_desc`, `category_status`, `created_at`, `updated_at`) VALUES
+INSERT INTO `tbl_category_post` (`category_id`, `category_name`, `category_desc`, `category_status`, `created_at`, `updated_at`) VALUES
 (15, 'Công nghệ', 'Chia sẻ kiến thức về công nghệ mới nhất', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
 (16, 'Giải trí', 'Tin tức giải trí, phim ảnh, âm nhạc', 0, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
 (17, 'Thể thao', 'Tin tức thể thao, cập nhật tỷ số', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
@@ -207,7 +211,54 @@ INSERT INTO `tbl_category_post` (`id`, `category_name`, `category_desc`, `catego
 (20, 'Sức khỏe', 'Kiến thức về sức khỏe, dinh dưỡng', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
 (21, 'Làm đẹp', 'Mẹo làm đẹp, chăm sóc da', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
 (22, 'Thời trang', 'Xu hướng thời trang, phối đồ', 0, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(23, 'Giáo dục', 'Kiến thức giáo dục, tài liệu học tập', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22');
+(23, 'Giáo dục', 'Kiến thức giáo dục, tài liệu học tập', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(28, 'Làm đẹpzz', 'fff', 1, '2024-03-20 23:37:21', '2024-03-20 23:37:21');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_info_post`
+--
+
+CREATE TABLE `tbl_info_post` (
+  `post_id` int(10) UNSIGNED NOT NULL,
+  `post_author` varchar(255) NOT NULL,
+  `post_index` int(11) NOT NULL,
+  `post_title` varchar(255) NOT NULL,
+  `post_content` text NOT NULL,
+  `post_status` int(11) NOT NULL,
+  `is_default` tinyint(1) NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_post`
+--
+
+CREATE TABLE `tbl_post` (
+  `post_id` bigint(20) UNSIGNED NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `post_author` varchar(255) NOT NULL,
+  `post_index` int(11) NOT NULL,
+  `post_title` varchar(255) NOT NULL,
+  `post_content` text NOT NULL,
+  `post_status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_post`
+--
+
+INSERT INTO `tbl_post` (`post_id`, `category_id`, `post_author`, `post_index`, `post_title`, `post_content`, `post_status`, `created_at`, `updated_at`) VALUES
+(1, 20, 'Đỗ Quốc Sang', 1, 'q', 'q', 1, '2024-03-20 20:30:58', '2024-03-20 20:30:58'),
+(2, 20, 'Đỗ Quốc Sang', 1, 'q', 'q', 0, '2024-03-20 20:31:04', '2024-03-20 20:31:04'),
+(3, 20, 'Đỗ Quốc Sang', 1, 'q', 'q', 0, '2024-03-20 20:32:19', '2024-03-20 20:32:19'),
+(4, 23, 'Đỗ Quốc Sang', 22, '2', '2', 1, '2024-03-20 20:32:27', '2024-03-20 20:32:27');
 
 -- --------------------------------------------------------
 
@@ -232,69 +283,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Test User', 'test@example.com', '2024-03-18 01:50:29', '$2y$12$R6sdab4VPE0SZI6EJXL.8ezSZyLXjd6l/Go4Vm0fTbLTwlMLTmD2K', 'tRihHkf28C', '2024-03-18 01:50:30', '2024-03-18 01:50:30');
-
---
--- Cấu trúc bảng cho bảng `tbl_menu`
---
-
-CREATE TABLE `tbl_menu` (
-  `id_menu` bigint(20) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `menu_name` varchar(100) NOT NULL,
-  `menu_url` varchar(255) NOT NULL,
-  `menu_status` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `tbl_menu`
---
-
-INSERT INTO `tbl_menu` (`id_menu`, `menu_name`, `menu_url`, `menu_status`, `created_at`, `updated_at`) VALUES
-(1, 'Giới thiệu AMIS kế toán', 'gioi-thieu-amis-ke-toan', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(2, 'Hướng dẫn khai thác dữ liệu', 'huong-dan-khai-thac-du-lieu', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(3, 'Hướng dẫn nghiệp vụ', 'huong-dan-nghiep-vu', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(4, 'Đào tạo miễn phí', 'dao-tao-mien-phi', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(5, 'Kênh hỗ trợ', 'kenh-ho-tro', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `tbl_menu`
---
-
-CREATE TABLE `tbl_sub_menu` (
-  `id_sub_menu` bigint(20) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `id_parent` bigint(20) UNSIGNED,
-  `menu_sub_name` varchar(100) NOT NULL,
-  `menu_sub_url` varchar(255) NOT NULL,
-  `menu_sub_status` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  FOREIGN KEY (id_parent) REFERENCES tbl_menu(id_menu)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `tbl_menu`
---
-
-INSERT INTO `tbl_sub_menu` (`id_sub_menu`, `id_parent`, `menu_sub_name`, `menu_sub_url`, `menu_sub_status`,`created_at`, `updated_at`) VALUES
-(1, 3, 'Quy trình nghiệp vụ', 'quy-trinh-nghiep-vu', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(2, 3, '1. Tiền mặt', 'tien-mat', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(3, 3, '2. Tiền gửi', 'tien-gui', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(4, 3, '3. Mua hàng', 'mua-hang', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(5, 3, '4. Bán hàng', 'ban-hang', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(6, 3, '5. Quản lý hóa đơn', 'quan-ly-hoa-don', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(7, 3, '6. Kho', 'kho', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(8, 3, '7. CCDC', 'ccdc', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(9, 3, '8. TSCĐ', 'tscd', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(10, 3, '9. Nghiệp vụ khác', 'nghiep-vu-khac', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(11, 5, 'Cộng đồng hỗ trợ miễn phí qua facebook', 'cong-dong-ho-tro-mien-phi-qua-facebook', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(12, 5, 'Diễn đàn hỗ trợ MISA', 'dien-dan-ho-tro-misa', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(13, 5, 'Kênh video hỗ trợ qua youtube', 'kenh-ho-tro-qua-youtube', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(14, 5, 'Đào tạo/giải pháp trực tuyến qua zoom', 'dao-tao-giai-phap-truc-tuyen-qua-zoom', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22');
-
--- --------------------------------------------------------
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -356,13 +344,25 @@ ALTER TABLE `sessions`
 -- Chỉ mục cho bảng `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`admin_id`);
 
 --
 -- Chỉ mục cho bảng `tbl_category_post`
 --
 ALTER TABLE `tbl_category_post`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`category_id`);
+
+--
+-- Chỉ mục cho bảng `tbl_info_post`
+--
+ALTER TABLE `tbl_info_post`
+  ADD PRIMARY KEY (`post_id`);
+
+--
+-- Chỉ mục cho bảng `tbl_post`
+--
+ALTER TABLE `tbl_post`
+  ADD PRIMARY KEY (`post_id`);
 
 --
 -- Chỉ mục cho bảng `users`
@@ -391,19 +391,31 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `admin_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_category_post`
 --
 ALTER TABLE `tbl_category_post`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `category_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_info_post`
+--
+ALTER TABLE `tbl_info_post`
+  MODIFY `post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_post`
+--
+ALTER TABLE `tbl_post`
+  MODIFY `post_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
