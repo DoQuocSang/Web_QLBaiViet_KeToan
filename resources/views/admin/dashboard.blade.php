@@ -7,7 +7,7 @@
                 <div id="carouselExampleBigIndicators" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active p-xl">
-                            <img class="d-block w-75 m-auto" src={{('public/backend/img/dashboard_welcome.jpg')}} alt="First slide">
+                            <img class="d-block w-75 m-auto" src={{asset('public/backend/img/dashboard_welcome.jpg')}} alt="First slide">
                         </div>
                     </div>
                 </div>
