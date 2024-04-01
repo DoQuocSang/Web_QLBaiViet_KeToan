@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryPost;
+use App\Http\Controllers\InfoPostController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -60,3 +61,16 @@ Route::post('/update-sub-menu-detail/{id}', [MenuController::class, 'update_sub_
 Route::get('/add-sub-menu', [MenuController::class, 'add_sub_menu']);
 Route::post('/save-sub-menu', [MenuController::class, 'save_sub_menu']);
 Route::get('/delete-menu-sub-detail/{id}', [MenuController::class, 'delete_sub_menu']);
+
+//Info Post
+Route::get('/all-info-post', [InfoPostController::class, 'all_info_post']);
+Route::get('/add-info-post', [InfoPostController::class, 'add_info_post']);
+Route::get('/edit-info-post/{info_post_id}', [InfoPostController::class, 'edit_info_post']);
+Route::get('/delete-info-post/{info_post_id}', [InfoPostController::class, 'delete_info_post']);
+
+Route::get('/active-info-post/{info_post_id}', [InfoPostController::class, 'active_info_post']);
+Route::get('/unactive-info-post/{info_post_id}', [InfoPostController::class, 'unactive_info_post']);
+
+Route::post('/save-info-post', [InfoPostController::class, 'save_info_post']);
+Route::post('/update-info-post/{info_post_id}', [InfoPostController::class, 'update_info_post']);
+

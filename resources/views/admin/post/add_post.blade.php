@@ -6,10 +6,10 @@
             <h2>Thêm bài viết</h2>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="index.html">Trang chủ</a>
+                    <a href={{URL::to('/dashboard')}}>Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a>Bài viết</a>
+                    <a href={{URL::to('/all-post-detail')}}>Bài viết</a>
                 </li>
                 <li class="breadcrumb-item active">
                     <strong>Thêm bài viết</strong>
@@ -70,13 +70,18 @@
                                                     class="form-control" placeholder="Nhập tiêu đề"></div>
                                         </div>
                                         <div class="form-group row"><label class="col-sm-2 col-form-label">Nội dung:</label>
-                                            <div class="col-sm-10"><textarea name="post_content" rows="5" class="form-control" placeholder="Nhập nội dung"></textarea></div>
+                                            <div class="col-sm-10">
+                                                <textarea class="summernote" name="post_content"></textarea>
+                                            </div>
                                         </div>
+                                        {{-- <div class="form-group row"><label class="col-sm-2 col-form-label">Nội dung:</label>
+                                            <div class="col-sm-10"><textarea name="post_content" rows="5" class="form-control" placeholder="Nhập nội dung"></textarea></div>
+                                        </div> --}}
                                         <div class="form-group row"><label class="col-sm-2 col-form-label">Trạng thái:</label>
                                             <div class="col-sm-10">
                                                 <select name="post_status" class="form-control m-b">
-                                                    <option value="0">Ẩn</option>
                                                     <option value="1">Hiện</option>
+                                                    <option value="0">Ẩn</option>
                                                 </select>
                                             </div>
                                         </div>

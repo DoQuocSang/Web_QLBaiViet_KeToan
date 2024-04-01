@@ -18,7 +18,7 @@ class PostController extends Controller
     public function all_post(){
         $all_post = DB::table('tbl_post')
         ->join('tbl_category_post','tbl_category_post.category_id','=','tbl_post.category_id')
-        ->orderby('tbl_post.post_id','desc')->get();
+        ->orderby('tbl_post.post_index','asc')->get();
         $manager_post = view('admin.post.all_post')->with('all_post', $all_post);
         
         return view('admin_layout')->with('admin.post.all_post', $manager_post);
@@ -34,6 +34,10 @@ class PostController extends Controller
         $data['post_author'] = Session::get('admin_name');
         $data['created_at'] = date("Y-m-d H:i:s");
         $data['updated_at'] = date("Y-m-d H:i:s");
+        // echo '<pre>';
+        // print_r($data) ;
+        // echo '</pre>';
+        // echo $data['post_demo'];
         DB::table('tbl_post')->insert($data);
 
         Session::put('message', 'Thêm bài viết thành công!');
