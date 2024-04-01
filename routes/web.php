@@ -44,7 +44,6 @@ Route::post('/update-post-detail/{post_id}', [PostController::class, 'update_pos
 
 //Menu
 Route::get('/all-menu', [MenuController::class, 'all_menu']);
-
 Route::get('/active-menu-detail/{id}', [MenuController::class, 'active_menu']);
 Route::get('/unactive-menu-detail/{id}', [MenuController::class, 'unactive_menu']);
 Route::get('/edit-menu-detail/{id}', [MenuController::class, 'edit_menu']);
