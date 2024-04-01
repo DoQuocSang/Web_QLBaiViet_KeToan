@@ -101,7 +101,7 @@
                                         <a class="dropdown-item" href="inner-faq.html">FAQ</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="inner-login.html">Login</a>
+                                        <a class="dropdown-item" href="{{URL::to('/login')}}">Login</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="inner-signup.html">Signup</a>
@@ -165,7 +165,7 @@
                     </nav>
                 </div>
                 <div class="d-flex align-items-center ml-lg-1 ml-xl-2 mr-4 mr-sm-6 m-lg-0">
-                    <a href="#" class="color--primary font-w--600 mr-2 d-none d-sm-inline-block">Login</a>
+                    <a href="{{URL::to('/login')}}" class="color--primary font-w--600 mr-2 d-none d-sm-inline-block">Login</a>
                     <a href="#" class="btn btn-size--md btn-bg--primary rounded--none btn-hover--3d">
                         <span class="btn__text font-w--500">Purchase now</span>
                     </a>

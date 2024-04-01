@@ -10,20 +10,19 @@
 
     <link href={{asset('public/backend/css/bootstrap.min.css')}} rel="stylesheet">
     <link href={{asset('public/backend/font-awesome/css/font-awesome.css') }} rel="stylesheet">
-
-    <link href={{asset('public/backend/css/animate.css')}} rel="stylesheet">
-    <link href={{asset('public/backend/css/style.css')}} rel="stylesheet">
-
     <link href={{asset("public/backend/css/plugins/summernote/summernote-bs4.css")}} rel="stylesheet">
+
 
     <link href={{asset("public/backend/css/plugins/datapicker/datepicker3.css")}} rel="stylesheet">
 
     <!-- FooTable -->
     <link href={{asset("public/backend/css/plugins/footable/footable.core.css")}} rel="stylesheet">
 
-    <link href={{asset("public/backend/css/animate.css")}} rel="stylesheet">
-    <link href={{asset("public/backend/css/style.css")}} rel="stylesheet">
+    <link href={{asset("public/backend/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css")}} rel="stylesheet">
+    <link href={{asset("public/backend/css/plugins/iCheck/custom.css")}} rel="stylesheet">
 
+    <link href={{asset('public/backend/css/animate.css')}} rel="stylesheet">
+    <link href={{asset('public/backend/css/style.css')}} rel="stylesheet">
 </head>
 
 <body>
@@ -73,9 +72,9 @@
                     <li>
                         <a href="#"><i class="fa fa-user"></i><span class="nav-label">Người dùng</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
-                     
+                            <li><a href="{{URL::to('/all-user')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-user')}}">Thêm mới</a></li>
+
                         </ul>
                     </li>
                     <li class="{{ strpos(Request::url(), 'post-detail') !== false ? 'active' : '' }}">
@@ -95,22 +94,23 @@
                     <li>
                         <a href="#"><i class="fa fa-caret-square-o-down"></i> <span class="nav-label">Menu hiển thị</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
+                            <li><a href="{{URL::to('/all-menu')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-menu')}}">Thêm mới menu</a></li>
+                            <li><a href="{{URL::to('/add-sub-menu')}}">Thêm mới menu con</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="{{ strpos(Request::url(), 'info-post') !== false ? 'active' : '' }}">
                         <a href="#"><i class="fa fa-info-circle"></i> <span class="nav-label">Trang thông tin</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
+                            <li><a href={{URL::to('/all-info-post')}}>Danh sách</a></li>
+                            <li><a href={{URL::to('/add-info-post')}}>Thêm mới</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-link"></i> <span class="nav-label">Link hỗ trợ</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
+                            <li><a href="{{URL::to('/all-link')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-link')}}">Thêm mới</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -193,6 +193,7 @@
     </div>
 
     <!-- Mainly scripts -->
+    
     <script src={{asset('public/backend/js/jquery-3.1.1.min.js')}}></script>
     <script src={{asset('public/backend/js/popper.min.js')}}></script>
     <script src={{asset('public/backend/js/bootstrap.js')}}></script>
@@ -217,7 +218,7 @@
     <script src={{asset('public/backend/js/plugins/pace/pace.min.js')}}></script>
 
     <!-- jQuery UI -->
-    <script src={{asset('public/backend/js/plugins/jquery-ui/jquery-ui.min.js')}}></script>
+    {{-- <script src={{asset('public/backend/js/plugins/jquery-ui/jquery-ui.min.js')}}></script> --}}
 
     <!-- Jvectormap -->
     <script src={{asset('public/backend/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js')}}></script>
@@ -241,10 +242,45 @@
     <!-- FooTable -->
     <script src={{asset("public/backend/js/plugins/footable/footable.all.min.js")}}></script>
 
+    <!-- iCheck -->
+    <script src={{asset("public/backend/js/plugins/iCheck/icheck.min.js")}}></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
     <script>
         $(document).ready(function(){
 
-            $('.summernote').summernote();
+            $('.summernote').summernote({
+                height: 150,
+                placeholder: 'Nhập nội dung...',
+                fontSize: 13,
+                toolbar: [
+                    // Font style dropdown
+                    ['style', ['style']],
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['color', ['color']],
+
+                    // Lists
+                    ['para', ['ul', 'ol', 'paragraph']],
+
+                    // Indentation
+                    ['height', ['height']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video', 'hr']],
+                    ['view', ['fullscreen', 'codeview']],
+                    ['help', ['help']]
+                ],
+                styleTags: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+                fontSizes: ['8', '9', '10', '11', '12', '13', '14', '15', '16', '18', '20', '24', '36']
+            });
 
             $('.input-group.date').datepicker({
                 todayBtn: "linked",
