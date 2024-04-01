@@ -11,11 +11,15 @@ use App\Http\Controllers\SupportLinkController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MenuController;
 
-//Frontend
+//Frontend -----------------------------------------------------------------
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 
-//Backend
+//Post
+Route::get('/all-post', [PostController::class, 'show_post_home']);
+
+
+//Backend -----------------------------------------------------------------
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/dashboard', [AdminController::class, 'show_dashboard']);
 Route::get('/admin-logout', [AdminController::class, 'logout']);
@@ -98,4 +102,5 @@ Route::get('/active-info-post/{info_post_id}', [InfoPostController::class, 'acti
 Route::get('/unactive-info-post/{info_post_id}', [InfoPostController::class, 'unactive_info_post']);
 
 Route::post('/save-info-post', [InfoPostController::class, 'save_info_post']);
+
 Route::post('/update-info-post/{info_post_id}', [InfoPostController::class, 'update_info_post']);
