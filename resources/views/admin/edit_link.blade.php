@@ -3,8 +3,11 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox">
-            
-            <h2>Cập nhật link hỗ trợ</h2>
+        <div class="ibox-link">
+                <h4>
+                    Link hỗ trợ > Danh sách > Cập nhật
+                </h4>
+            </div>
             <div class="ibox-content">
                 <!-- Form -->
                 <form action="{{URL::to('/update-link/'.$edit_link->link_id)}}" method="POST">

@@ -3,25 +3,32 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox">
-            <h2>Cập nhật tài khoản người dùng</h2>
+            <div class="ibox-link">
+                <h4>
+                    Người dùng > Danh sách > Cập nhật
+                </h4>
+            </div>
             <div class="ibox-content">
+                <div class="text-center">
+                    <h2>Cập nhật người dùng </h2>
+                </div>
                 <!-- Form -->
-                <form action="{{URL::to('/update-user/'.$edit_user->id)}}" method="POST">
+                <form action="{{URL::to('/update-user/'.$edit_user->user_id)}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="name">Tên người dùng</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ $edit_user->name }}"
-                            required>
+                        <input type="text" class="form-control" id="user_name" name="user_name"
+                            value="{{ $edit_user->user_name }}" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" value="{{ $edit_user->email }}"
-                            required>
+                        <input type="email" class="form-control" id="user_email" name="user_email"
+                            value="{{ $edit_user->user_email }}" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Mật khẩu</label>
-                        <input type="text" class="form-control" id="password" name="password"
-                            value="{{ $edit_user->password }}" required>
+                        <input type="text" class="form-control" id="user_password" name="user_password"
+                            value="{{ $edit_user->user_password }}" required>
                     </div>
                     <div class="form-group">
                         <label for="remember_token">Remember Token</label>

@@ -3,13 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\User;
-use App\Http\Controllers\SupportLink;
-
-//Frontend
-Route::get('/', [HomeController::class, 'index']);
-
-Route::get('/home', [HomeController::class, 'index']);
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\SupportLinkController;
+use App\Http\Controllers\AuthController;
 
 //Backend
 Route::get('/admin', [AdminController::class, 'index']);
@@ -18,21 +14,31 @@ Route::get('/admin-logout', [AdminController::class, 'logout']);
 Route::post('/admin-dashboard', [AdminController::class, 'dashboard']);
 
 //User
-Route::get('/all-user', [User::class, 'all_user']);
-Route::get('/add-user', [User::class, 'add_user']);
-Route::get('/edit-user/{id}', [User::class, 'edit_user']);
-Route::get('/delete-user/{id}', [User::class, 'delete_user']);
+Route::get('/all-user', [UserController::class, 'all_user']);
+Route::get('/add-user', [UserController::class, 'add_user']);
+//Route::post('/admin-dashboard', [AdminController::class, 'dashboard']);
+Route::get('/edit-user/{user_id}', [UserController::class, 'edit_user']);
+Route::delete('/delete-user/{user_id}', [UserController::class, 'delete_user'])->name('delete.user');
 
-Route::post('/save-user', [User::class, 'save_user']);
-Route::post('/update-user/{id}', [User::class, 'update_user']);
+Route::post('/save-user', [UserController::class, 'save_user']);
+Route::post('/update-user/{user_id}', [UserController::class, 'update_user']);
 
 //Link
-Route::get('/all-link', [SupportLink::class, 'all_link']);
-Route::get('/add-link', [SupportLink::class, 'add_link']);
-Route::get('/edit-link/{id}', [SupportLink::class, 'edit_link']);
-Route::get('/delete-link/{id}', [SupportLink::class, 'delete_link']);
+Route::get('/all-link', [SupportLinkController::class, 'all_link']);
+Route::get('/add-link', [SupportLinkController::class, 'add_link']);
+Route::get('/edit-link/{id}', [SupportLinkController::class, 'edit_link']);
+Route::delete('/delete-link/{id}', [SupportLinkController::class, 'delete_link'])->name('delete.link');
 
-Route::post('/save-link', [SupportLink::class, 'save_link']);
-Route::post('/update-link/{id}', [SupportLink::class, 'update_link']);
+Route::post('/save-link', [SupportLinkController::class, 'save_link']);
+Route::post('/update-link/{id}', [SupportLinkController::class, 'update_link']);
 
+//Frontend
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
+
+// Route cho trang đăng nhập
+Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
+Route::post('/loginSubmit', [AuthController::class, 'login'])->name('login.submit');
+
+//Route::post('/loginSubmit', [UserController::class, 'login'])->name('login.submit');
 

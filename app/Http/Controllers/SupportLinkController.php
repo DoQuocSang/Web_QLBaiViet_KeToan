@@ -8,7 +8,7 @@ use Session;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Database\Eloquent\Model;
 
-class SupportLink extends Controller
+class SupportLinkController extends Controller
 {
     public function all_link(){
         //return view('admin.all_link');
@@ -53,16 +53,18 @@ class SupportLink extends Controller
     }
     public function delete_link(Request $request,$link_id){
        
-        $link = DB::table('tbl_supportlink')->where('link_id', $link_id)->first();
-        if ($link->title === 'Facebook*' || $link->title === 'Gọi hỗ trợ*' || $link->title === 'Youtube*' || $link->title === 'Zoom*') {
-            //Session::put('message','Bạn không thể xóa liên kết cố định!');
-            Session::flash('error', 'Bạn không thể xóa liên kết cố định!');
-            return redirect()->back();
-            
-        }
-  
-        DB::table('tbl_supportlink')->where('link_id',$link_id)->delete();
-        Session::flash('success', 'Xóa liên kết thành công!');
-        return Redirect::to ('all-link');
+        $link=DB::table('tbl_supportlink')->where('link_id',$link_id)->first();
+       if(!$link){
+        Session::flash('error','Không tìm thấy liên kết!');
+        return redirect()->back();
+       }
+        if ($link->title==='Facebook*'||$link->title==='Gọi hỗ trợ*'||$link->title==='Youtube*'||$link->title==='Zoom*'){
+        Session::flash('error','Bạn không thể xóa liên kết cố định!');
+        return redirect()->back();
+       }
+       DB::table('tbl_supportlink')->where('link_id',$link_id)->delete();
+       Session::flash('success','Xóa liên kết thành công!');
+       return redirect()->back();
+       
     }
 }

@@ -4,6 +4,11 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox">
+        <div class="ibox-link">
+                <h4>
+                    Link hỗ trợ > Thêm mới
+                </h4>
+            </div>
             <div class="ibox-content">
                 <!-- Form -->
                 <form action="{{URL::to('/save-link')}}" method="POST">

@@ -13,15 +13,19 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox">
+            <div class="ibox-link">
+                <h4>
+                    Người dùng > Danh sách
+                </h4>
+            </div>
             <div class="ibox-content">
-            <?php
+                <?php
                     $message = Session::get('message');
                     if ($message){
                         echo '<span class="text-alert">'.$message.'</span>';
                         Session::put('message',null);
                     }
                 ?>
-                <h2>Danh sách người dùng</h2>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
@@ -35,24 +39,36 @@
                             </tr>
                         </thead>
                         <tbody>
-                           @foreach($all_user as $key => $user)
+                            @foreach($all_user as $key => $user)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->password }}</td>
+                                <td>{{ $user->user_name }}</td>
+                                <td>{{ $user->user_email }}</td>
+                                <td>{{ $user->user_password }}</td>
                                 <td>{{ $user->remember_token }}</td>
                                 <td>
-                                    <a href="{{ URL::to('/edit-user/' . $user->id) }}" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> </a>
-                                    <a onclick ="return confirm('Bạn có chắc muốn xóa người dùng này?')" href="{{ URL::to('/delete-user/' . $user->id) }}"class="btn btn-xs btn-danger"><i class="fa fa-trash"></i> </a>
+                                    <div class="btn-group" role="group">
+                                        <a href="{{ URL::to('/edit-user/' . $user->user_id) }}"
+                                            class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> </a>
+                                            <span style="margin: 0 5px;"></span>
+                                        <form action="{{ route('delete.user', $user->user_id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-xs btn-danger"
+                                                onclick="return confirm('Bạn có chắc muốn xóa người dùng này?')">
+                                                <i class="fa fa-trash"></i> 
+                                            </button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
-                           @endforeach
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
-        <button onclick="window.location='{{URL::to('/add-user')}}'" class="btn btn-primary">Thêm người dùng mới</button>
+            <button onclick="window.location='{{URL::to('/add-user')}}'" class="btn btn-primary">Thêm người dùng
+                mới</button>
         </div>
     </div>
 </div>
