@@ -19,6 +19,16 @@
     <!-- Your CSS -->
     <link rel="stylesheet" href={{asset("public/frontend/css/custom.css")}}>
 
+    <style>
+        .custom-icon {
+          color: #b11e26; 
+        }
+
+        .custom-bg {
+          background-color: #b11e26; 
+        }
+      </style>
+
 </head>
 
 <body class="theme-fern" data-spy="scroll" data-target="#navbar-nav" data-animation="false" data-appearance="light">
@@ -99,73 +109,81 @@
         @yield('content')
 
         <!-- =========== Start of Footer ============ -->
-        <footer class="space footer footer--fixed section--light hidden">
-            <div class="container">
+        <footer class="footer footer--fixed section--light hidden bg-light">
+            <div class="py-6" style="width: 1400px; margin: 0 auto;">
                 <div class="row">
-                    <div class="col-12 col-md-9 col-lg-4 mb-4 mb-xl-0">
+                    <div class="col-6 col-md-4 col-lg-2 mb-4 mb-xl-0 d-flex align-items-center pr-5">
                         <div class="pr-xl-3">
                             <span class="mb-3">
-                                <img class="navbar-brand__regular" src={{asset("public/frontend/img/account_manager_image/ameinvoice.png")}} alt="brand-logo" style="width: 120px;">
-                                </span>
-                            <p class="mb-1">The main objectives of the project are to meet the needs of cryptocurrency projects and users, and to provide access to investment product.</p>
-                            <p>© SpaceMax, 2018.</p>
-                            <br>
-                            <ul class="icon-group mb-0">
-                                <li><a href="#" class="text-color--700"><i class="fab fa-medium-m"></i></a></li>
-                                <li><a href="#" class="text-color--700"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" class="text-color--700"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#" class="text-color--700"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="#" class="text-color--700"><i class="fab fa-telegram-plane"></i></a></li>
-                                <li><a href="#" class="text-color--700"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#" class="text-color--700"><i class="fab fa-pinterest"></i></a></li>
-                            </ul>
+                                <img class="navbar-brand__regular" src={{asset("public/frontend/img/account_manager_image/ameinvoice.png")}} alt="brand-logo" style="width: 120%;">
+                            </span>
                         </div>
                     </div>
                     <!-- end of col -->
-                    <div class="col-6 col-md-4 col-lg-4 col-xl-2 mb-2 mb-xl-0">
+                    <div class="col-6 col-md-4 col-lg-8 mb-2 mb-xl-0">
                         <div class="widget widget-nav">
-                            <span class="widget__title font-size--20 font-w--700 mb-1">Products</span>
-                            <ul>
-                                <li><a href="#">Domain Name</a></li>
-                                <li><a href="#">Websites</a></li>
-                                <li><a href="#">Online Stores</a></li>
-                                <li><a href="#">Mobile Apps</a></li>
-                                <li><a href="#">Logos</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Features</a></li>
-                            </ul>
+                            <div>
+                                <span class="widget__title font-size--20 font-w--700 text-uppercase">Thông tin công ty</span>
+                                <ul>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fa fa-building custom-icon" aria-hidden="true"></i>
+                                        <span class="text-uppercase ml-1">Công ty TNHH NC9 Việt Nam</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fa fa-book custom-icon"></i>
+                                        <span class="ml-1">Giấy CNĐKKD: 411023000452 - Ngày cấp: 26/04/2013, được sửa đổi lần thứ 9 ngày 27/03/2020</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fa fa-book custom-icon"></i>
+                                        <span class="ml-1">Cơ quan cấp: Ủy ban nhân dân Thành phố Hồ Chí Minh</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="widget__title font-size--20 font-w--700 text-uppercase">Liên hệ</span>
+                                <ul>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fa fa-map-marker custom-icon" aria-hidden="true"></i>
+                                        <span class="text-uppercase ml-1">Trụ sở chính: 87 Nguyễn Thị Thập, KDC Him Lam, phường Tân Hưng, Quận 7, TP.Hồ Chí Minh</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fa fa-map-marker custom-icon"></i>
+                                        <span class="ml-1">Văn phòng đại diện: 25/19 Ngô Quyền, Phường 6, TP.Đà Lạt, Tỉnh Lâm Đồng</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fa fa-book custom-icon"></i>
+                                        <span class="ml-1">Trung tâm đào tạo: Trường Đại học Đà Lạt - Số 1 Phù Đổng Thiên Vương, Phường 8, TP.Đà Lạt, Tỉnh Lâm Đồng</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fa fa-phone custom-icon"></i>
+                                        <span class="ml-1">07.8888.1000 (Korean) - 09.2121.9000 (Việt Nam)</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fa fa-envelope custom-icon"></i>
+                                        <span class="ml-1">manager@amnote.com.vn (Korean) - amteam@amnote.com.vn (Việt Nam)</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <!-- end of widget col-->
-                    <div class="col-6 col-md-4 col-lg-4 col-xl-2 offset-xl-1 mb-2 mb-xl-0">
+                    <div class="col-6 col-md-4 col-lg-2 mb-2 mb-xl-0">
                         <div class="widget widget-nav">
-                            <span class="widget__title font-size--20 font-w--700 mb-1">Company</span>
+                            <span class="widget__title font-size--20 font-w--700 mb-1 text-uppercase">Chính sách hỗ trợ</span>
                             <ul>
-                                <li><a href="#">About SpaceMax</a></li>
-                                <li><a href="#">Jobs</a></li>
-                                <li><a href="#">Design Assets</a></li>
-                                <li><a href="#">App Market Terms</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Affiliates</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end of widget col-->
-                    <div class="col-6 col-md-4 col-lg-4 col-xl-2 offset-xl-1 mb-2 mb-xl-0">
-                        <div class="widget widget-nav">
-                            <span class="widget__title font-size--20 font-w--700 mb-1">Support</span>
-                            <ul>
-                                <li><a href="#">SpaceMax Blog</a></li>
-                                <li><a href="#">Support Center</a></li>
-                                <li><a href="#">Terms of use</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Workshops</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                                <li><a href="#">Thông tin thanh toán</a></li>
+                                <li>
+                                    <img class="navbar-brand__regular" src={{asset("public/frontend/img/account_manager_image/logoSaleNoti.png")}} alt="brand-logo" style="width: 120%;">
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <!-- end of widget col-->
                 </div>
+            </div>
+            <div class="custom-bg h-2">
+                <p class="text-white text-center">Copyright 2020 @ AM-Einvoice. All rights reserved.</p>
             </div>
         </footer>
         <!-- =========== End of Footer ============ -->
