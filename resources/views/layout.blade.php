@@ -48,7 +48,7 @@
         <header class="navbar navbar-sticky navbar-expand-lg navbar-light">
             <div class="container position-relative">
                 <a class="navbar-brand" href={{URL::to('/home')}}>
-                    <img class="navbar-brand__regular" src={{asset("public/frontend/img/account_manager_image/ameinvoice.png")}} alt="brand-logo" style="width: 120px;">
+                    <img class="navbar-brand__regular" src={{asset("public/frontend/img/account_manager_image/ameinvoice-light.png")}} alt="brand-logo" style="width: 120px;">
                 </a>
                 <!--  End of brand logo -->
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
@@ -71,7 +71,7 @@
                             @foreach($all_active_menus as $menu)
                                 <?php $hasSubmenu = count($menu->submenus) > 0; ?>
                                 <li class="nav-item{{ $hasSubmenu ? ' dropdown' : '' }}">
-                                    <a class="nav-link{{ $hasSubmenu ? ' dropdown-toggle' : '' }}" href="{{ $hasSubmenu ? 'javascript:;' : $menu->menu_url }}" @if($hasSubmenu) data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @endif>
+                                    <a class="text-white nav-link{{ $hasSubmenu ? ' dropdown-toggle' : '' }}" href="{{ $hasSubmenu ? 'javascript:;' : $menu->menu_url }}" @if($hasSubmenu) data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @endif>
                                         {{ $menu->menu_name }}
                                         {{-- @if($hasSubmenu)
                                             <span class="arrow" style="transform: translateX(200px);"></span>
@@ -84,92 +84,6 @@
                                                     <a class="dropdown-item" href="{{ $submenu->menu_sub_url }}">{{ $submenu->menu_sub_name }}</a>
                                                 </li>
                                             @endforeach
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Landing Pages</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href={{URL::to('/home')}}>Home - 1</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="home-2.html">Home - 2</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="home-3.html">Home - 3</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="home-4.html">Home - 4</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="home-5.html">Home - 5</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="home-6.html">Home - 6</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="home-7.html">Home - 7</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="inner-knowledgebase.html">Knowledgebase</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="inner-faq.html">FAQ</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="{{URL::to('/login')}}">Login</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="inner-signup.html">Signup</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="inner-recover-account.html">Recover Account</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="inner-coming-soon.html">Coming Soon</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="inner-404.html">Error 404</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="inner-maintenance.html">Maintenance</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog </a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Pages</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="blog-grid-2-col.html">Blog Grid 2 Column</a>
-                                            </li>
-
-                                            <li>
-                                                <a class="dropdown-item" href="blog-grid-3-col.html">Blog Grid 3 Column</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-left.html">Blog Sidebar Left</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href={{URL::to('/all-post')}}>Blog Sidebar right</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Details</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="blog-details-full.html">Blog Details Full</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="blog-details-sidebar-right.html">Blog Details Sidebar Right</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="blog-details-sidebar-left.html">Blog Details Sidebar Left</a>
-                                            </li>
                                         </ul>
                                     @endif
                                 </li>
