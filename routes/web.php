@@ -60,6 +60,9 @@ Route::get('/post-detail-by-id/{post_id}', [PostController::class, 'post_detail_
 //Get introduce post
 Route::get('/gioi-thieu-einvoice-viet-nam', [IntroduceController::class, 'get_post_introduce']);
 
+//Get instruct post
+Route::get('/huong-dan-su-dung', [IntroduceController::class, 'get_post_instruct']);
+
 //User
 Route::get('/all-user', [UserController::class, 'all_user']);
 Route::get('/add-user', [UserController::class, 'add_user']);

@@ -25,4 +25,20 @@ class IntroduceController extends Controller
             ], 404);
         }
     }
+
+    public function get_post_instruct() {
+        $post_instruct = DB::table('tbl_info_post')
+                ->where('info_post_title', 'HƯỚNG DẪN SỬ DỤNG')
+                ->first();
+        $manager_post_instruct = view('pages.instruct')->with('post_instruct', $post_instruct);
+    
+        if ($post_instruct) {
+            return view('layout')->with('pages.instruct', $manager_post_instruct);
+        } else {
+            return response()->json([
+                'success' => false,
+                'message' => 'Không tìm thấy bài viết có tiêu đề là "HƯỚNG DẪN SỬ DỤNG"'
+            ], 404);
+        }
+    }
 }
