@@ -7,7 +7,6 @@ use Session;
 use DB;
 use Illuminate\Support\Facades\Redirect;
 
-session_start();
 
 class PostController extends Controller
 {
@@ -148,6 +147,25 @@ class PostController extends Controller
             ->with('latest_post', $latest_post);
 
         return view('layout')->with('pages.post.all_post', $manager_post);
+    }
+
+    public function post_detail_by_id($post_id)
+    {
+        $post_by_id =  DB::table('tbl_post')
+            ->join('tbl_category_post', 'tbl_category_post.category_id', '=', 'tbl_post.category_id')
+            ->where('tbl_post.post_id',$post_id)
+            ->get();
+
+        $latest_post = DB::table('tbl_post')
+        ->join('tbl_category_post', 'tbl_category_post.category_id', '=', 'tbl_post.category_id')
+        ->orderBy('tbl_post.post_id', 'desc')
+        ->get();
+
+        $manager_post = view('pages.post.post_detail')
+            ->with('post_by_id', $post_by_id)
+            ->with('latest_post', $latest_post);
+
+        return view('layout')->with('pages.post.post_detail', $manager_post);
     }
 
 
