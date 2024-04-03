@@ -8,12 +8,21 @@
 
     <title>INSPINIA | Dashboard v.2</title>
 
-    <link href={{ asset('public/backend/css/bootstrap.min.css') }} rel="stylesheet">
-    <link href={{ asset('public/backend/font-awesome/css/font-awesome.css') }} rel="stylesheet">
+    <link href={{asset('public/backend/css/bootstrap.min.css')}} rel="stylesheet">
+    <link href={{asset('public/backend/font-awesome/css/font-awesome.css') }} rel="stylesheet">
+    <link href={{asset("public/backend/css/plugins/summernote/summernote-bs4.css")}} rel="stylesheet">
 
-    <link href={{ asset('public/backend/css/animate.css') }} rel="stylesheet">
-    <link href={{ asset('public/backend/css/style.css') }} rel="stylesheet">
 
+    <link href={{asset("public/backend/css/plugins/datapicker/datepicker3.css")}} rel="stylesheet">
+
+    <!-- FooTable -->
+    <link href={{asset("public/backend/css/plugins/footable/footable.core.css")}} rel="stylesheet">
+
+    <link href={{asset("public/backend/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css")}} rel="stylesheet">
+    <link href={{asset("public/backend/css/plugins/iCheck/custom.css")}} rel="stylesheet">
+
+    <link href={{asset('public/backend/css/animate.css')}} rel="stylesheet">
+    <link href={{asset('public/backend/css/style.css')}} rel="stylesheet">
 </head>
 
 <body>
@@ -57,46 +66,44 @@
                             Amnote
                         </div>
                     </li>
-                    <li class="active">
-                        <a href={{URL::to('/dasboard')}}><i class="fa fa-th-large"></i> <span class="nav-label">Trang chủ</span></a>
+                    <li class="{{ strpos(Request::url(), 'dashboard') !== false ? 'active' : '' }}">
+                        <a href={{URL::to('/dashboard')}}><i class="fa fa-th-large"></i> <span class="nav-label">Trang chủ</span></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-user"></i><span class="nav-label">Người dùng</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{URL::to('/all-user')}}">Danh sách</a></li>
                             <li><a href="{{URL::to('/add-user')}}">Thêm mới</a></li>
+
                         </ul>
                     </li>
-                    <li>
+                    <li class="{{ strpos(Request::url(), 'post-detail') !== false ? 'active' : '' }}">
                         <a href="#"><i class="fa fa-file-text"></i> <span class="nav-label">Bài viết</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
-                            <li><a href="ecommerce_product.html">Chỉnh sửa</a></li>
+                            <li><a href={{URL::to('/all-post-detail')}}>Danh sách</a></li>
+                            <li><a href={{URL::to('/add-post-detail')}}>Thêm mới</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="{{ strpos(Request::url(), 'category') !== false ? 'active' : '' }}">
                         <a href="#"><i class="fa fa-archive"></i> <span class="nav-label">Thể loại</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
-                            <li><a href="ecommerce_product.html">Chỉnh sửa</a></li>
+                            <li><a href={{URL::to('/all-category-post')}}>Danh sách</a></li>
+                            <li><a href={{URL::to('/add-category-post')}}>Thêm mới</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-caret-square-o-down"></i> <span class="nav-label">Menu hiển thị</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
-                            <li><a href="ecommerce_product.html">Chỉnh sửa</a></li>
+                            <li><a href="{{URL::to('/all-menu')}}">Danh sách</a></li>
+                            <li><a href="{{URL::to('/add-menu')}}">Thêm mới menu</a></li>
+                            <li><a href="{{URL::to('/add-sub-menu')}}">Thêm mới menu con</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="{{ strpos(Request::url(), 'info-post') !== false ? 'active' : '' }}">
                         <a href="#"><i class="fa fa-info-circle"></i> <span class="nav-label">Trang thông tin</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="ecommerce_products_grid.html">Danh sách</a></li>
-                            <li><a href="ecommerce_product_list.html">Thêm mới</a></li>
-                            <li><a href="ecommerce_product.html">Chỉnh sửa</a></li>
+                            <li><a href={{URL::to('/all-info-post')}}>Danh sách</a></li>
+                            <li><a href={{URL::to('/add-info-post')}}>Thêm mới</a></li>
                         </ul>
                     </li>
                     <li>
@@ -113,7 +120,7 @@
 
         <div id="page-wrapper" class="gray-bg">
             <div class="row border-bottom">
-                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">
                         <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
                                 class="fa fa-bars"></i> </a>
@@ -168,6 +175,9 @@
 
                 </nav>
             </div>
+
+            @yield('admin_page_heading')
+           
             <div class="wrapper wrapper-content">
                 @yield('admin_content')
             </div>
@@ -183,44 +193,115 @@
     </div>
 
     <!-- Mainly scripts -->
-    <script src={{ asset('public/backend/js/jquery-3.1.1.min.js') }}></script>
-    <script src={{ asset('public/backend/js/popper.min.js') }}></script>
-    <script src={{ asset('public/backend/js/bootstrap.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/metisMenu/jquery.metisMenu.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/slimscroll/jquery.slimscroll.min.js') }}></script>
+    
+    <script src={{asset('public/backend/js/jquery-3.1.1.min.js')}}></script>
+    <script src={{asset('public/backend/js/popper.min.js')}}></script>
+    <script src={{asset('public/backend/js/bootstrap.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/metisMenu/jquery.metisMenu.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/slimscroll/jquery.slimscroll.min.js')}}></script>
 
     <!-- Flot -->
-    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.tooltip.min.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.spline.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.resize.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.pie.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.symbol.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/flot/jquery.flot.time.js') }}></script>
+    <script src={{asset('public/backend/js/plugins/flot/jquery.flot.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/flot/jquery.flot.tooltip.min.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/flot/jquery.flot.spline.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/flot/jquery.flot.resize.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/flot/jquery.flot.pie.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/flot/jquery.flot.symbol.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/flot/jquery.flot.time.js')}}></script>
 
     <!-- Peity -->
-    <script src={{ asset('public/backend/js/plugins/peity/jquery.peity.min.js') }}></script>
-    <script src={{ asset('public/backend/js/demo/peity-demo.js') }}></script>
+    <script src={{asset('public/backend/js/plugins/peity/jquery.peity.min.js')}}></script>
+    <script src={{asset('public/backend/js/demo/peity-demo.js')}}></script>
 
     <!-- Custom and plugin javascript -->
-    <script src={{ asset('public/backend/js/inspinia.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/pace/pace.min.js') }}></script>
+    <script src={{asset('public/backend/js/inspinia.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/pace/pace.min.js')}}></script>
 
     <!-- jQuery UI -->
-    <script src={{ asset('public/backend/js/plugins/jquery-ui/jquery-ui.min.js') }}></script>
+    {{-- <script src={{asset('public/backend/js/plugins/jquery-ui/jquery-ui.min.js')}}></script> --}}
 
     <!-- Jvectormap -->
-    <script src={{ asset('public/backend/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js') }}></script>
-    <script src={{ asset('public/backend/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}></script>
+    <script src={{asset('public/backend/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js')}}></script>
+    <script src={{asset('public/backend/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}></script>
 
     <!-- EayPIE -->
-    <script src={{ asset('public/backend/js/plugins/easypiechart/jquery.easypiechart.js') }}></script>
+    <script src={{asset('public/backend/js/plugins/easypiechart/jquery.easypiechart.js')}}></script>
 
     <!-- Sparkline -->
-    <script src={{ asset('public/backend/js/plugins/sparkline/jquery.sparkline.min.js') }}></script>
+    <script src={{asset('public/backend/js/plugins/sparkline/jquery.sparkline.min.js')}}></script>
 
     <!-- Sparkline demo data  -->
-    <script src={{ asset('public/backend/js/demo/sparkline-demo.js') }}></script>
+    <script src={{asset('public/backend/js/demo/sparkline-demo.js')}}></script>
+
+    <!-- SUMMERNOTE -->
+    <script src={{asset("public/backend/js/plugins/summernote/summernote-bs4.js")}}></script>
+
+    <!-- Data picker -->
+    <script src={{asset("public/backend/js/plugins/datapicker/bootstrap-datepicker.js")}}></script>
+
+    <!-- FooTable -->
+    <script src={{asset("public/backend/js/plugins/footable/footable.all.min.js")}}></script>
+
+    <!-- iCheck -->
+    <script src={{asset("public/backend/js/plugins/iCheck/icheck.min.js")}}></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+
+            $('.summernote').summernote({
+                height: 150,
+                placeholder: 'Nhập nội dung...',
+                fontSize: 13,
+                toolbar: [
+                    // Font style dropdown
+                    ['style', ['style']],
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['color', ['color']],
+
+                    // Lists
+                    ['para', ['ul', 'ol', 'paragraph']],
+
+                    // Indentation
+                    ['height', ['height']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video', 'hr']],
+                    ['view', ['fullscreen', 'codeview']],
+                    ['help', ['help']]
+                ],
+                styleTags: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+                fontSizes: ['8', '9', '10', '11', '12', '13', '14', '15', '16', '18', '20', '24', '36']
+            });
+
+            $('.input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+        });
+    </script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+
+            $('.footable').footable();
+
+        });
+
+    </script>
 
     <script>
         $(document).ready(function() {

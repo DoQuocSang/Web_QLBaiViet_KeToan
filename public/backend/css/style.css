@@ -9845,3 +9845,7 @@ body.md-skin {
     margin: 0;
   }
 }
+
+.footable-row-detail-name {
+  width: 100px;
+}
