@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Session;
 use DB;
 use Illuminate\Support\Facades\Redirect;
-
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -154,15 +154,36 @@ class PostController extends Controller
         $post_by_id =  DB::table('tbl_post')
             ->join('tbl_category_post', 'tbl_category_post.category_id', '=', 'tbl_post.category_id')
             ->where('tbl_post.post_id',$post_id)
-            ->get();
+            ->first();
 
         $latest_post = DB::table('tbl_post')
         ->join('tbl_category_post', 'tbl_category_post.category_id', '=', 'tbl_post.category_id')
         ->orderBy('tbl_post.post_id', 'desc')
         ->get();
 
+         // Lấy bài viết trước
+        $previous_post = DB::table('tbl_post')
+        ->where('tbl_post.post_index', '<', $post_by_id->post_index)
+        ->orderBy('tbl_post.post_index', 'desc')
+        ->first();
+
+        // Lấy bài viết sau
+        $next_post = DB::table('tbl_post')
+        ->where('tbl_post.post_index', '>', $post_by_id->post_index)
+        ->orderBy('tbl_post.post_index', 'asc')
+        ->first();
+
+        $post_content_with_class = Str::of($post_by_id->post_content)->replaceMatches('/<p\s+style="([^"]*)">/', function ($matches) {
+            $style = $matches[1]; // Extract the style attribute value
+            // Append margin-bottom: 15px; to the existing styles
+            return '<p style="' . $style . ' margin-bottom: 15px; width: 100%;">';
+        });
+
         $manager_post = view('pages.post.post_detail')
             ->with('post_by_id', $post_by_id)
+            ->with('previous_post', $previous_post)
+            ->with('next_post', $next_post)
+            ->with('post_content_with_class', $post_content_with_class)
             ->with('latest_post', $latest_post);
 
         return view('layout')->with('pages.post.post_detail', $manager_post);

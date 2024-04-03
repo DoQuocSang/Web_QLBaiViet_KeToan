@@ -259,7 +259,7 @@
             $('.summernote').summernote({
                 height: 150,
                 placeholder: 'Nhập nội dung...',
-                fontSize: 13,
+                fontSize: 16,
                 toolbar: [
                     // Font style dropdown
                     ['style', ['style']],
