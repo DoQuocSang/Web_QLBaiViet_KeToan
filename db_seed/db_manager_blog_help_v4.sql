@@ -205,7 +205,7 @@ CREATE TABLE `tbl_menu` (
 --
 
 INSERT INTO `tbl_menu` (`id_menu`, `menu_name`, `menu_url`, `menu_status`, `created_at`, `updated_at`) VALUES
-(1, 'Giới thiệu AMIS kế toán', 'gioi-thieu-amis-ke-toan', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(1, 'Giới thiệu Einvoice Việt Nam', 'gioi-thieu-einvoice-viet-nam', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
 (2, 'Hướng dẫn khai thác dữ liệu', 'huong-dan-khai-thac-du-lieu', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
 (3, 'Hướng dẫn nghiệp vụ', 'huong-dan-nghiep-vu', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
 (4, 'Đào tạo miễn phí', 'dao-tao-mien-phi', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
