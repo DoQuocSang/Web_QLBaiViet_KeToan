@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 01, 2024 lúc 03:21 AM
+-- Thời gian đã tạo: Th4 02, 2024 lúc 03:25 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -156,8 +156,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('FdBkSpr2Ii8sCnoBuUXuo8xXG7ODjlOUOzqLD5fr', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiMTFQYkVXQk9TZzB6Y0xyNEI4UG9qUGZUTU0yWkhHeEZUUmt1bjd2WiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDY6Imh0dHA6Ly9sb2NhbGhvc3QvVGFpTGlldTQvV2ViX1FMQmFpVmlldF9LZVRvYW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1711933308),
-('P5qq993dEAHqoUBt0OmsYM8vOzHqpp0d14qUAdDQ', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0', 'YTo5OntzOjY6Il90b2tlbiI7czo0MDoiUkhZR0NoRXBwaENNWDlybFoxcFhKTkJVRU9wSFFXdW9xVkwweFJUaSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTU6Imh0dHA6Ly9sb2NhbGhvc3QvVGFpTGlldTQvV2ViX1FMQmFpVmlldF9LZVRvYW4vYWxsLXBvc3QiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjE0OiJhZG1pbl91c2VybmFtZSI7czo2OiJzYW5nZHEiO3M6MTA6ImFkbWluX25hbWUiO3M6MTc6IsSQ4buXIFF14buRYyBTYW5nIjtzOjE0OiJhZG1pbl9wYXNzd29yZCI7czozMjoiYzRjYTQyMzhhMGI5MjM4MjBkY2M1MDlhNmY3NTg0OWIiO3M6MTA6ImFkbWluX3JvbGUiO2k6MTtzOjg6ImFkbWluX2lkIjtpOjE7czo3OiJtZXNzYWdlIjtOO30=', 1711609470);
+('FdBkSpr2Ii8sCnoBuUXuo8xXG7ODjlOUOzqLD5fr', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0', 'YTo5OntzOjY6Il90b2tlbiI7czo0MDoiMTFQYkVXQk9TZzB6Y0xyNEI4UG9qUGZUTU0yWkhHeEZUUmt1bjd2WiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6ODQ6Imh0dHA6Ly9sb2NhbGhvc3QvVGFpTGlldTQvU2FuZ192MS9XZWJfUUxCYWlWaWV0X0tlVG9hbi9wb3N0LWRldGFpbC1ieS1pZC9mYXZpY29uLnBuZyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NzoibWVzc2FnZSI7TjtzOjg6ImFkbWluX2lkIjtpOjE7czoxNDoiYWRtaW5fdXNlcm5hbWUiO3M6Njoic2FuZ2RxIjtzOjEwOiJhZG1pbl9uYW1lIjtzOjE3OiLEkOG7lyBRdeG7kWMgU2FuZyI7czoxNDoiYWRtaW5fcGFzc3dvcmQiO3M6MzI6ImM0Y2E0MjM4YTBiOTIzODIwZGNjNTA5YTZmNzU4NDliIjtzOjEwOiJhZG1pbl9yb2xlIjtpOjE7fQ==', 1711957186);
 
 -- --------------------------------------------------------
 
@@ -184,69 +183,6 @@ INSERT INTO `tbl_admin` (`admin_id`, `admin_name`, `admin_username`, `admin_emai
 (1, 'Đỗ Quốc Sang', 'sangdq', 'sangadmin@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 1, '2024-03-18 08:50:42', '2024-03-18 08:50:42'),
 (2, 'Huy Đào', 'huydq', 'huydq@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 0, '2024-03-18 09:31:22', '2024-03-18 09:31:22'),
 (3, 'Trang Phạm', 'trangpth', 'trangpth@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 0, '2024-03-18 09:31:22', '2024-03-18 09:31:22');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `tbl_menu`
---
-
-CREATE TABLE `tbl_menu` (
-  `id_menu` bigint(20) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `menu_name` varchar(100) NOT NULL,
-  `menu_url` varchar(255) NOT NULL,
-  `menu_status` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `tbl_menu`
---
-
-INSERT INTO `tbl_menu` (`id_menu`, `menu_name`, `menu_url`, `menu_status`, `created_at`, `updated_at`) VALUES
-(1, 'Giới thiệu Einvoice Việt Nam', 'gioi-thieu-einvoice-viet-nam', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(2, 'Hướng dẫn khai thác dữ liệu', 'huong-dan-khai-thac-du-lieu', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(3, 'Hướng dẫn nghiệp vụ', 'huong-dan-nghiep-vu', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(4, 'Đào tạo miễn phí', 'dao-tao-mien-phi', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(5, 'Kênh hỗ trợ', 'kenh-ho-tro', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `tbl_menu`
---
-
-CREATE TABLE `tbl_sub_menu` (
-  `id_sub_menu` bigint(20) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `id_parent` bigint(20) UNSIGNED,
-  `menu_sub_name` varchar(100) NOT NULL,
-  `menu_sub_url` varchar(255) NOT NULL,
-  `menu_sub_status` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  FOREIGN KEY (id_parent) REFERENCES tbl_menu(id_menu)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `tbl_menu`
---
-
-INSERT INTO `tbl_sub_menu` (`id_sub_menu`, `id_parent`, `menu_sub_name`, `menu_sub_url`, `menu_sub_status`,`created_at`, `updated_at`) VALUES
-(1, 3, 'Quy trình nghiệp vụ', 'quy-trinh-nghiep-vu', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(2, 3, '1. Tiền mặt', 'tien-mat', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(3, 3, '2. Tiền gửi', 'tien-gui', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(4, 3, '3. Mua hàng', 'mua-hang', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(5, 3, '4. Bán hàng', 'ban-hang', 1,'2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(6, 3, '5. Quản lý hóa đơn', 'quan-ly-hoa-don', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(7, 3, '6. Kho', 'kho', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(8, 3, '7. CCDC', 'ccdc', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(9, 3, '8. TSCĐ', 'tscd', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(10, 3, '9. Nghiệp vụ khác', 'nghiep-vu-khac', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(11, 5, 'Cộng đồng hỗ trợ miễn phí qua facebook', 'cong-dong-ho-tro-mien-phi-qua-facebook', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(12, 5, 'Diễn đàn hỗ trợ MISA', 'dien-dan-ho-tro-misa', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(13, 5, 'Kênh video hỗ trợ qua youtube', 'kenh-ho-tro-qua-youtube', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
-(14, 5, 'Đào tạo/giải pháp trực tuyến qua zoom', 'dao-tao-giai-phap-truc-tuyen-qua-zoom', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22');
 
 -- --------------------------------------------------------
 
@@ -309,6 +245,32 @@ INSERT INTO `tbl_info_post` (`info_post_id`, `info_post_author`, `info_post_titl
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `tbl_menu`
+--
+
+CREATE TABLE `tbl_menu` (
+  `id_menu` bigint(20) UNSIGNED NOT NULL,
+  `menu_name` varchar(100) NOT NULL,
+  `menu_url` varchar(255) NOT NULL,
+  `menu_status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_menu`
+--
+
+INSERT INTO `tbl_menu` (`id_menu`, `menu_name`, `menu_url`, `menu_status`, `created_at`, `updated_at`) VALUES
+(1, 'Giới thiệu AMIS kế toán', 'gioi-thieu-amis-ke-toan', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(2, 'Hướng dẫn khai thác dữ liệu', 'huong-dan-khai-thac-du-lieu', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(3, 'Hướng dẫn nghiệp vụ', 'huong-dan-nghiep-vu', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(4, 'Đào tạo miễn phí', 'dao-tao-mien-phi', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(5, 'Kênh hỗ trợ', 'kenh-ho-tro', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `tbl_post`
 --
 
@@ -339,6 +301,44 @@ INSERT INTO `tbl_post` (`post_id`, `category_id`, `post_author`, `post_index`, `
 (16, 34, 'Đỗ Quốc Sang', 7, 'Quy định đặt tên hộ kinh doanh cần lưu ý 2024', '<p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Bạn đang chuẩn bị đăng ký thành lập hộ kinh doanh hoặc thay đổi tên hộ kinh doanh? Dưới đây là những điều MISA AMIS muốn chia sẻ về quy định đặt tên hộ kinh doanh mà bạn cần lưu ý.</span></p><div class=\"g g-90\" style=\"margin: 0px; padding: 0px; overflow: hidden; line-height: 1; zoom: 1; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"><div class=\"g-single a-117\"><div class=\"code_author author_act\"></div></div></div><div class=\"g g-89\" style=\"margin: 0px; padding: 0px; overflow: hidden; line-height: 1; zoom: 1; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"><div class=\"g-single a-115\"></div></div><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34);\"><span style=\"font-family: &quot;open sans&quot;; color: var(--td_text_color, #111111); font-size: 13px;\"><b>1. Hộ kinh doanh là gì?</b></span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: arial, helvetica, sans-serif;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Theo khoản 1 Điều 79 Nghị định số 01/2021/NĐ-CP:&nbsp;</span><em><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">“Hộ kinh doanh là cơ sở sản xuất, kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập và chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh của hộ. Trường hợp các thành viên hộ gia đình đăng ký hộ kinh doanh thì ủy quyền cho một thành viên làm đại diện hộ kinh doanh. Cá nhân đăng ký hộ kinh doanh, người được các thành viên hộ gia đình ủy quyền làm đại diện hộ kinh doanh là chủ hộ kinh doanh.”</span></em></span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Cá nhân, thành viên hộ gia đình chỉ được đăng ký một hộ kinh doanh trong phạm vị toàn quốc, không được đồng thời làm chủ doanh nghiệp tư nhân, tuy nhiên vẫn được quyền góp vốn, mua cổ phần, mua phần vốn góp trong doanh nghiệp với tư cách cá nhân.</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; color: var(--td_text_color, #111111); font-size: 13px;\"><b>2. Quy định đặt tên hộ kinh doanh</b></span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: arial, helvetica, sans-serif;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Theo khoản 1 Điều 88&nbsp;</span><a href=\"https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-01-2021-ND-CP-dang-ky-doanh-nghiep-283247.aspx\" target=\"_blank\" rel=\"noopener\" name=\"click_anchortext_link\" style=\"color: rgb(51, 122, 183); outline: none;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Nghị định 01/2021/NĐ-CP</span></a><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">, việc đặt tên hộ kinh doanh được quy định như sau:</span></span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Hộ kinh doanh có tên gọi riêng, bao gồm 2 thành tố theo thứ tự:</span></p><ul style=\"padding: 0px; margin-bottom: 26px; line-height: 1.42857; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"><li style=\"line-height: inherit; margin-left: 21px; margin-bottom: 10px; text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Cụm từ “Hộ kinh doanh”</span></li><li style=\"line-height: inherit; margin-left: 21px; margin-bottom: 0px; text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Tên riêng của hộ kinh doanh</span></li></ul><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Trong đó, tên riêng được viết bằng các chữ cái trong bảng chữ cái tiếng Việt, các chữ F, J, Z, W, có thể kèm các chữ số, ký hiệu</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Tên hộ kinh doanh có thể đặt bằng tiếng Việt hoặc cả tiếng Anh</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-weight: bolder; color: rgb(17, 17, 17); font-family: &quot;open sans&quot;; font-size: 13px;\">3. Gợi ý đặt tên hộ kinh doanh</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Hộ kinh doanh có thể thực hiện việc đặt tên hộ kinh doanh theo ngành, nghề đăng ký hoạt động</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Thực hiện việc đặt tên theo tên cá nhân&nbsp;</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Đặt tên theo tên địa danh nổi bật về các mặt hàng kinh doanh mang tính bản địa</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Đặt tên bằng các tính từ phổ biến gây ấn tượng với khách hàng</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Đặt theo các danh từ liên quan đến cuộc sống, phổ biến trong xã hội</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Đặt kết hợp với các từ ngoại ngữ (fashion, shoes, shop, spa…)</span></p><hr><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-weight: bolder; color: rgb(17, 17, 17); font-family: &quot;open sans&quot;; font-size: 13px;\">4. Tên hộ kinh doanh có thể đặt trùng nhau không</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Theo Điều 88 Nghị định 01/2021/NĐ-CP, việc đặt tên hộ kinh doanh cần lưu ý:</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><em><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">“2. Không được sử dụng từ ngữ, ký hiệu vi phạm truyền thống lịch sử, văn hóa, đạo đức và thuần phong mỹ tục của dân tộc để đặt tên riêng cho hộ kinh doanh.</span></em></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><em><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">3. Hộ kinh doanh không được sử dụng các cụm từ “công ty”, “doanh nghiệp” để đặt tên hộ kinh doanh.</span></em></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><em><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">4. Tên riêng hộ kinh doanh không được trùng với tên riêng của hộ kinh doanh đã đăng ký trong phạm vi cấp huyện.”</span></em></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; color: var(--td_text_color, #111111); font-size: 13px;\"><b>5. Cách kiểm tra tên hộ kinh doanh có bị trùng hay không</b></span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Để kiểm tra tên hộ kinh doanh định đặt có bị trùng hay không, hộ kinh doanh có thể tiến hành tra cứu theo một số cách như sau:</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Sử dụng các công cụ tìm kiếm (mạng xã hội, website…) để tìm kiếm tên định đặt cũng như các thông tin cơ bản khác.</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Liên hệ trực tiếp Bộ phận một cửa UBND cấp huyện hoặc chuyên viên Phòng Tài chính – Kế hoạch thuộc UBND cấp huyện để tra cứu thông tin và kiểm tra tên dự định đăng ký có bị trùng hay không.</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; overflow-wrap: break-word; text-align: justify;\"><span style=\"color: rgb(17, 17, 17); font-family: &quot;open sans&quot;; font-size: 13px; font-weight: bolder;\">6.&nbsp;</span><span style=\"text-align: left; font-size: 13px; font-family: &quot;open sans&quot;;\"><font color=\"#111111\" face=\"open sans\"><b>Tên cửa hàng và tên đăng ký hộ kinh doanh có giống nhau không</b></font></span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Tên cửa hàng không được quy định cụ thể trong các văn bản luật chuyên ngành. Tên cửa hàng là tên gọi khác của các tổ chức kinh tế cần phải đăng ký kinh doanh bao gồm: hộ kinh doanh, doanh nghiệp, hợp tác xã và cả những cá nhân không phải đăng ký kinh doanh.</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Mục đích chính của việc đặt tên cửa hàng là để xây dựng thương hiệu cũng như nhận biết và phân biệt cửa hàng này với cửa hàng khác.&nbsp;</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Ngoài ra, tên cửa hàng cũng được ghi trên các phương tiện quảng cáo như: bảng quảng cáo, băng-rôn, biển hiệu, hộp đèn, màn hình chuyên quảng cáo.&nbsp;</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Như vậy, tên cửa hàng và tên hộ kinh doanh không giống nhau:</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Tên cửa hàng do chủ hộ kinh doanh tự lựa chọn còn tên hộ kinh doanh phải đảm bảo các quy định về đặt tên như cụm từ Hộ kinh doanh và tên riêng hộ kinh doanh.&nbsp;</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">– Ngoài ra, tên hộ kinh doanh phải đăng ký và được ghi trên Giấy chứng nhận đăng ký kinh doanh còn tên cửa hàng thì không cần phải đăng ký.</span></p>', 1, '2024-03-22 21:15:51', '2024-03-22 21:15:51'),
 (17, 30, 'Đỗ Quốc Sang', 8, 'Trải nghiệm WOW: Đỉnh cao của dịch vụ chăm sóc khách hàng', '<p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Sự phát triển của công nghệ cũng như xu hướng toàn cầu hoá đã thu hẹp khoảng cách về giá cả, nhưng lại góp phần làm tăng tính đa dạng sản phẩm trên thị trường. Bên cạnh việc tìm tòi những đột phá trong sản phẩm, để ghi dấu ấn trong lòng khách hàng, các doanh nghiệp ngày này còn phải chú ý tới trải nghiệm khách hàng.</span></p><div class=\"g g-73\" style=\"margin: 0px; padding: 0px; overflow: hidden; line-height: 1; zoom: 1; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"><div class=\"g-single a-98\"></div></div><div class=\"g g-61\" style=\"margin: 0px; padding: 0px; overflow: hidden; line-height: 1; zoom: 1; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"><div class=\"g-single a-82\"></div></div><div class=\"g g-91\" style=\"margin: 0px; padding: 0px; overflow: hidden; line-height: 1; zoom: 1; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"><div class=\"g-single a-118\"><div class=\"code_author author_crm\"></div></div></div><div class=\"g g-83\" style=\"margin: 0px; padding: 0px; overflow: hidden; line-height: 1; zoom: 1; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"><div class=\"g-single a-108\"></div></div><div class=\"g g-48\" style=\"margin: 0px; padding: 0px; overflow: hidden; line-height: 1; zoom: 1; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"><div class=\"g-single a-69\"></div></div><div class=\"g g-56\" style=\"margin: 0px; padding: 0px; overflow: hidden; line-height: 1; zoom: 1; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"><div class=\"g-single a-77\"><div class=\"chuyen-muc-crm\"></div></div></div><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Một trải nghiệm khách hàng đáng nhớ sẽ trở thành một nhân tố quan trọng tác động tới quyết định mua hàng. Cũng từ đó, khái niệm Trải nghiệm WOW – trải nghiệm trên cả mong đợi ra đời, và được biết đến như mục tiêu của dịch vụ chăm sóc khách hàng mà doanh nghiệp nào cũng muốn hướng tới.&nbsp;</span></p><h2 style=\"font-family: GoogleSans; color: rgb(34, 34, 34); margin: 30px 0px 20px; font-size: 27px; line-height: 38px; text-align: justify;\"><span id=\"I_Trai_nghiem_WOW_la_gi\"></span></h2><h3 style=\"margin: 27px 0px 17px; line-height: 30px; text-align: justify;\"><span id=\"1_Dinh_nghia_trai_nghiem_WOW_cua_khach_hang\" style=\"\"><font color=\"#222222\" face=\"open sans\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">1. Trải nghiệm WOW là gì?</span></font></span></h3><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Khi mà các hoạt động Marketing truyền thống dần mất đi tính hiệu quả trong việc xây dựng và chiếm trọn niềm tin từ khách hàng. Càng ngày, người tiêu dùng hiện đại càng mong đợi mức độ hài lòng cao hơn đối với trải nghiệm mua sắm. Vì lý do đó rất nhiều doanh nghiệp hiểu rằng việc cạnh tranh bằng trải nghiệm khách hàng là một hướng đi mới giàu tiềm năng hơn.&nbsp;</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Khảo sát của Mckinsey năm 2016 đã chứng minh rằng các công ty tối ưu hóa trải nghiệm khách hàng thường đạt mức tăng trưởng doanh thu cao hơn 5-10% trong khi chi phí giảm từ 15-25%chỉ trong vòng 2 đến 3 năm. Đặc biệt những doanh nghiệp cung cấp trải nghiệm khách hàng đặc biệt có thể giúp thương hiệu vượt qua đối thủ cạnh tranh.&nbsp;</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Nỗ lực cung cấp trải nghiệm trên cả mong đợi – Một trải nghiệm WOW khó quên cho khách hàng, giờ đây đã là mục tiêu không chỉ của những ông lớn như Amazon, Apple và Google; mà còn của tất cả các doanh nghiệp thuộc các lĩnh vực khác nhau trên toàn thế giới. Vậy cụ thể trải nghiệm WOW là gì? Làm thế nào để doanh nghiệp xây dựng được trải nghiệm WOW trên toàn bộ hành trình khách hàng tương tác với thương hiệu? Hãy cùng MISA khám phá trong phần I của bài viết này.</span></p><p><span style=\"color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px;\"></span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34);\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Đọc thêm:&nbsp;</span><a href=\"https://amis.misa.vn/124620/visual-thinking/\" name=\"click_anchortext_link\" style=\"color: rgb(51, 122, 183); outline: none;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Visual thinking</span></a><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">&nbsp;là gì? Cách ứng dụng visual thinking trong marketing</span></p><h3 style=\"font-family: GoogleSans; color: rgb(34, 34, 34); margin: 27px 0px 17px; font-size: 22px; line-height: 30px; text-align: justify;\"><span id=\"1_Dinh_nghia_trai_nghiem_WOW_cua_khach_hang\" style=\"\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">2. Định nghĩa trải nghiệm WOW của khách hàng&nbsp;</span></span></h3><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Trải nghiệm khách hàng (Customer experience – C.X )&nbsp;</span><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">là nhận thức chung của khách hàng về trải nghiệm của họ với một công ty hoặc thương hiệu. Hai tác giả Pine và Gilmore của cuốn sách nổi tiếng “Nền kinh tế trải nghiệm – The Experience Economy” cho rằng: Trải nghiệm khách hàng bao gồm tất cả các khía cạnh của trải nghiệm mà khách hàng có được trong suốt quá trình tiếp xúc giữa họ và nhà cung cấp sản phẩm hoặc dịch vụ.</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Trải nghiệm khách hàng không diễn ra trong một khoảng thời gian cố định, mà nó là tất cả những gì khách hàng cảm nhận được thông qua hành trình khách hàng, các điểm tiếp xúc tương tác với thương hiệu và môi trường diễn ra trải nghiệm. Đây là quan điểm nhận được nhiều sự ủng hộ và đồng tình nhất trong cộng đồng học thuật kinh tế.</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Trong cuốn sách&nbsp;</span><i><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">“Understanding Customer Experience – tạm dịch: Hiểu về trải nghiệm khách hàng”</span></i><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">, hai tác giả Meyer và Schwager giải thích chi tiết hơn rằng trải nghiệm khách hàng là phản ứng tinh thần và chủ quan của khách hàng khi tiếp xúc trực tiếp hoặc gián tiếp với một công ty. Tiếp xúc trực tiếp thường do khách hàng khởi xướng và diễn ra trong quá trình mua, sử dụng hoặc trải nghiệm dịch vụ. Tiếp xúc gián tiếp xảy ra khi khách hàng vô tình tương tác với những đại diện thương hiệu như các chiến dịch truyền thông, các KOC/KOL, thông tin báo chí và các bài đánh giá v.v.</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Có thể thấy, trải nghiệm khách hàng mang tính chủ quan cá nhân rất cao, cùng một không gian cùng một cách tiếp cận nhưng cảm giác và cảm xúc khách hàng nhận được lại rất khác nhau. Vì vậy, bài toán khó đặt ra cho các doanh nghiệp ngày nay là làm thế nào để duy trì các trải nghiệm khách hàng tích cực; đồng thời cải thiện để mang tới những trải nghiệm tuyệt vời hơn cho người tiêu dùng.&nbsp;</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Ví dụ có một khách du lịch muốn mua một đôi giày của hàng thời trang yêu thích. Tuy nhiên sau khi tìm kiếm trên website và liên hệ với hotline, nhân viên công ty xác nhận hàng dự trữ đã hết. Sau cuộc gọi chăm sóc khách hàng tưởng như bình thường , người nhân viên đã chủ động tìm kiếm sản phẩm đó cho khách hàng ở nhiều cửa hàng khác và chuyển phát đôi giày miễn phí tới khách sạn của nữ khách hàng nọ.&nbsp;</span></p><h3 style=\"font-family: GoogleSans; color: rgb(34, 34, 34); margin: 27px 0px 17px; font-size: 22px; line-height: 30px; text-align: justify;\"><span id=\"2_Phan_biet_trai_nghiem_WOW_va_dich_vu_khach_hang_thong_thuong\" style=\"\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">3. Phân biệt trải nghiệm WOW và dịch vụ khách hàng thông thường</span></span></h3><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Khi nói đến trải nghiệm khách hàng, không ít nhà quản lý sẽ nghĩ ngay đến những dịch vụ khách hàng vẫn đang được triển khai trong doanh nghiệp. Tuy nhiên, dịch vụ khách hàng chỉ là một phần của toàn bộ hành trình của khách hàng. Trong khi, trải nghiệm WOW lại là một cấp độ trải nghiệm khách hàng mang đến sự khác biệt đáng kinh ngạc, và gây ấn tượng mạnh mẽ.&nbsp;</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Như đã phân tích ở phần định nghĩa,&nbsp; trải nghiệm WOW về cơ bản có 3 đặc điểm khác biệt quan trọng so với dịch vụ khách hàng thông thường. Đó là tác động cảm xúc, mức độ độc đáo đột phá và tầm ảnh hưởng với khách hàng. Cụ thể:</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Trải nghiệm WOW nhằm tạo ra:</span></p><ul style=\"padding: 0px; margin-top: 8px; margin-bottom: 8px; line-height: 1.42857; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px; text-align: justify;\"><li aria-level=\"2\" style=\"line-height: inherit; margin-left: 21px; margin-bottom: 10px;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Một trạng thái cảm xúc đặc biệt, mạnh mẽ và tích cực mà khách hàng trải qua khi sử dụng một sản phẩm hoặc dịch vụ.</span></li><li aria-level=\"2\" style=\"line-height: inherit; margin-left: 21px; margin-bottom: 10px;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Trải nghiệm WOW thường liên quan đến những đột phá sáng tạo, sự chăm sóc chi tiết đến từng khía cạnh và sự tận tâm của nhân viên. Chính việc phá vỡ những giới hạn thông thường và mang tới trải nghiệm bất ngờ đã tạo nên một trải nghiệm đáng nhớ và để lại ấn tượng sâu sắc trong lòng khách hàng.</span></li><li aria-level=\"2\" style=\"line-height: inherit; margin-left: 21px; margin-bottom: 0px;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Trải nghiệm WOW nhằm mục đích tối đa hóa sự hài lòng của khách hàng, tạo ra sự gắn kết và hướng tới lòng trung thành lâu dài.</span></li></ul><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-family: &quot;open sans&quot;; font-size: 13px;\">Trong khi đó, dịch vụ khách hàng thông thường:</span></p><ul style=\"padding: 0px; margin-top: 8px; margin-bottom: 8px; line-height: 1.42857; color: rgb(34, 34, 34); font-family: GoogleSans; font-size: 16px; text-align: justify;\"><li aria-level=\"2\" style=\"line-height: inherit; margin-left: 21px; margin-bottom: 10px;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Nhằm đáp ứng nhu cầu cơ bản và các yêu cầu của khách hàng một cách tốt nhất. Nó tập trung vào việc cung cấp giải pháp và hỗ trợ cần thiết để đáp ứng mong đợi của khách hàng. Đó có thể là dịch vụ tư vấn bán hàng, hậu mãi v.v.</span></li><li aria-level=\"2\" style=\"line-height: inherit; margin-left: 21px; margin-bottom: 10px;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Dịch vụ khách hàng thông thường chỉ gói gọn trong một bộ phận chuyên môn nhất định. Quá trình hỗ trợ khách hàng buộc phải tuân theo một quy trình với những tiêu chí đã được định sẵn. Vì vậy, nhân viên dịch vụ khách hàng thông thường khó có thể linh hoạt thay đổi hoặc chủ động để đưa ra giải pháp sáng tạo, bất ngờ với khách hàng.</span></li><li aria-level=\"2\" style=\"line-height: inherit; margin-left: 21px; margin-bottom: 0px;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Dịch vụ khách hàng thông thường có thể cung cấp giá trị đáng tin cậy và chất lượng, nhưng không thể gây ấn tượng mạnh hoặc tạo ra trải nghiệm đáng nhớ.</span></li></ul><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Tóm lại, trải nghiệm WOW là những trải nghiệm luôn đầy cảm xúc tích cực cùng yếu tố bất ngờ mà doanh nghiệp tạo ra cho khách hàng của mình. Mặt khác, dịch vụ khách hàng thông thường là các hoạt động và quy trình được quy định từ trước để đáp ứng các yêu cầu của khách hàng một cách hiệu quả, nhưng không tạo ra sự ấn tượng mạnh hay trải nghiệm đáng nhớ.&nbsp;</span></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-family: GoogleSans; overflow-wrap: break-word; font-size: 16px; color: rgb(34, 34, 34); text-align: justify;\"><span style=\"font-size: 13px; font-family: &quot;open sans&quot;;\">Việc phân biệt trải nghiệm WOW và dịch vụ khách hàng thông thường giúp doanh nghiệp nhận thức về tầm quan trọng của việc tạo ra trải nghiệm độc đáo và ấn tượng cho khách hàng. Qua đó, giúp các doanh nghiệp hiểu rõ hơn về cách phát triển và áp dụng các biện pháp để tạo ra trải nghiệm WOW và tăng cường quan hệ với khách hàng.</span></p>', 1, '2024-03-22 21:24:54', '2024-03-22 21:27:39');
 
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_sub_menu`
+--
+
+CREATE TABLE `tbl_sub_menu` (
+  `id_sub_menu` bigint(20) UNSIGNED NOT NULL,
+  `id_parent` bigint(20) UNSIGNED DEFAULT NULL,
+  `menu_sub_name` varchar(100) NOT NULL,
+  `menu_sub_url` varchar(255) NOT NULL,
+  `menu_sub_status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_sub_menu`
+--
+
+INSERT INTO `tbl_sub_menu` (`id_sub_menu`, `id_parent`, `menu_sub_name`, `menu_sub_url`, `menu_sub_status`, `created_at`, `updated_at`) VALUES
+(1, 3, 'Quy trình nghiệp vụ', 'quy-trinh-nghiep-vu', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(2, 3, '1. Tiền mặt', 'tien-mat', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(3, 3, '2. Tiền gửi', 'tien-gui', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(4, 3, '3. Mua hàng', 'mua-hang', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(5, 3, '4. Bán hàng', 'ban-hang', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(6, 3, '5. Quản lý hóa đơn', 'quan-ly-hoa-don', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(7, 3, '6. Kho', 'kho', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(8, 3, '7. CCDC', 'ccdc', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(9, 3, '8. TSCĐ', 'tscd', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(10, 3, '9. Nghiệp vụ khác', 'nghiep-vu-khac', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(11, 5, 'Cộng đồng hỗ trợ miễn phí qua facebook', 'cong-dong-ho-tro-mien-phi-qua-facebook', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(12, 5, 'Diễn đàn hỗ trợ MISA', 'dien-dan-ho-tro-misa', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(13, 5, 'Kênh video hỗ trợ qua youtube', 'kenh-ho-tro-qua-youtube', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22'),
+(14, 5, 'Đào tạo/giải pháp trực tuyến qua zoom', 'dao-tao-giai-phap-truc-tuyen-qua-zoom', 1, '2024-03-20 06:31:22', '2024-03-20 06:31:22');
+
+-- --------------------------------------------------------
+
 --
 -- Cấu trúc bảng cho bảng `tbl_supportlink`
 --
@@ -347,6 +347,7 @@ CREATE TABLE `tbl_supportlink` (
   `link_id` int(10) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
+  `icon_class` varchar(50) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -355,12 +356,11 @@ CREATE TABLE `tbl_supportlink` (
 -- Đang đổ dữ liệu cho bảng `tbl_supportlink`
 --
 
-
 INSERT INTO `tbl_supportlink` (`link_id`, `title`, `url`, `icon_class`, `created_at`, `updated_at`) VALUES
-(1, 'Facebook*', 'https://www.facebook.com/PhanMemKeToanAMnote', 'icon icon-logo-facebook', '2024-03-27 18:40:40', '2024-03-27 18:40:40'),
-(2, 'Gọi hỗ trợ*', '090-613-6161(korean) / 08-5555-9000(vn)', 'icon icon-meeting', '2024-03-27 18:40:40', '2024-03-27 18:40:40'),
-(3, 'Youtube*', 'https://www.youtube.com/@amgroup8156', 'icon icon-logo-youtube', '2024-03-27 18:40:40', '2024-03-27 18:40:40'),
-(4, 'Zoom*', 'http://www.amgroup.com.vn/', 'icon icon-zoom', '2024-03-27 18:40:40', '2024-03-27 18:40:40')
+(1, 'Facebook*', 'https://www.facebook.com/PhanMemKeToanAMnote', 'icon icon-logo-facebook', '2024-03-27 11:40:40', '2024-03-27 11:40:40'),
+(2, 'Gọi hỗ trợ*', '090-613-6161(korean) / 08-5555-9000(vn)', 'icon icon-meeting', '2024-03-27 11:40:40', '2024-03-27 11:40:40'),
+(3, 'Youtube*', 'https://www.youtube.com/@amgroup8156', 'icon icon-logo-youtube', '2024-03-27 11:40:40', '2024-03-27 11:40:40'),
+(4, 'Zoom*', 'http://www.amgroup.com.vn/', 'icon icon-zoom', '2024-03-27 11:40:40', '2024-03-27 11:40:40');
 
 -- --------------------------------------------------------
 
@@ -387,9 +387,6 @@ INSERT INTO `tbl_user` (`user_id`, `user_name`, `user_email`, `user_password`, `
 (2, 'QHuy', 'huy@example.com', '1', 'BKO50ggSXU', '2024-03-27 18:38:36', '2024-03-27 18:38:36'),
 (3, 'QSang', 'sang@example.com', '1', 'qslzSB7QIC', '2024-03-27 18:38:36', '2024-03-27 18:38:36'),
 (7, 'HoaiTrang', 'trang1@email.com', '123456', NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
 
 -- --------------------------------------------------------
 
@@ -490,10 +487,23 @@ ALTER TABLE `tbl_info_post`
   ADD PRIMARY KEY (`info_post_id`);
 
 --
+-- Chỉ mục cho bảng `tbl_menu`
+--
+ALTER TABLE `tbl_menu`
+  ADD PRIMARY KEY (`id_menu`);
+
+--
 -- Chỉ mục cho bảng `tbl_post`
 --
 ALTER TABLE `tbl_post`
   ADD PRIMARY KEY (`post_id`);
+
+--
+-- Chỉ mục cho bảng `tbl_sub_menu`
+--
+ALTER TABLE `tbl_sub_menu`
+  ADD PRIMARY KEY (`id_sub_menu`),
+  ADD KEY `id_parent` (`id_parent`);
 
 --
 -- Chỉ mục cho bảng `users`
@@ -543,16 +553,38 @@ ALTER TABLE `tbl_info_post`
   MODIFY `info_post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT cho bảng `tbl_menu`
+--
+ALTER TABLE `tbl_menu`
+  MODIFY `id_menu` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT cho bảng `tbl_post`
 --
 ALTER TABLE `tbl_post`
   MODIFY `post_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
+-- AUTO_INCREMENT cho bảng `tbl_sub_menu`
+--
+ALTER TABLE `tbl_sub_menu`
+  MODIFY `id_sub_menu` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `tbl_sub_menu`
+--
+ALTER TABLE `tbl_sub_menu`
+  ADD CONSTRAINT `tbl_sub_menu_ibfk_1` FOREIGN KEY (`id_parent`) REFERENCES `tbl_menu` (`id_menu`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

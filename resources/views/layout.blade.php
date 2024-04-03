@@ -62,7 +62,7 @@
         <header class="navbar navbar-sticky navbar-expand-lg navbar-light">
             <div class="container position-relative">
                 <a class="navbar-brand" href={{URL::to('/home')}}>
-                    <img class="navbar-brand__regular" src={{asset("public/frontend/img/account_manager_image/ameinvoice.png")}} alt="brand-logo" style="width: 120px;">
+                    <img class="navbar-brand__regular" src={{asset("public/frontend/img/account_manager_image/ameinvoice-light.png")}} alt="brand-logo" style="width: 120px;">
                 </a>
                 <!--  End of brand logo -->
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
@@ -81,7 +81,7 @@
                             @foreach($all_active_menus as $menu)
                                 <?php $hasSubmenu = count($menu->submenus) > 0; ?>
                                 <li class="nav-item{{ $hasSubmenu ? ' dropdown' : '' }}">
-                                    <a class="nav-link{{ $hasSubmenu ? ' dropdown-toggle' : '' }}" href="{{ $hasSubmenu ? 'javascript:;' : $menu->menu_url }}" @if($hasSubmenu) data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @endif>
+                                    <a class="text-white nav-link{{ $hasSubmenu ? ' dropdown-toggle' : '' }}" href="{{ $hasSubmenu ? 'javascript:;' : $menu->menu_url }}" @if($hasSubmenu) data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @endif>
                                         {{ $menu->menu_name }}
                                     </a>
                                     @if($hasSubmenu)

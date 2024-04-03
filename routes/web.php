@@ -54,6 +54,8 @@ Route::get('/unactive-post-detail/{post_id}', [PostController::class, 'unactive_
 
 Route::post('/save-post-detail', [PostController::class, 'save_post']);
 Route::post('/update-post-detail/{post_id}', [PostController::class, 'update_post']);
+//-----------------
+Route::get('/post-detail-by-id/{post_id}', [PostController::class, 'post_detail_by_id']);
 
 //Get introduce post
 Route::get('/gioi-thieu-einvoice-viet-nam', [IntroduceController::class, 'get_post_introduce']);
