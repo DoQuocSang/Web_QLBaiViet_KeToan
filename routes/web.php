@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SupportLinkController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\WelcomeController;
+
 
 //Backend
 Route::get('/admin', [AdminController::class, 'index']);
@@ -33,12 +35,11 @@ Route::post('/save-link', [SupportLinkController::class, 'save_link']);
 Route::post('/update-link/{id}', [SupportLinkController::class, 'update_link']);
 
 //Frontend
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 
 // Route cho trang đăng nhập
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
 Route::post('/loginSubmit', [AuthController::class, 'login'])->name('login.submit');
 
-//Route::post('/loginSubmit', [UserController::class, 'login'])->name('login.submit');
 

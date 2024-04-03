@@ -18,6 +18,9 @@
     <link rel="stylesheet" href={{("public/frontend/css/app.css")}}>
     <!-- Your CSS -->
     <link rel="stylesheet" href={{("public/frontend/css/custom.css")}}>
+    <!-- Icon fonts -->
+    <link rel="stylesheet" href="{{ asset('public/frontend/fontawesome/css/all.css') }}">
+
 
 </head>
 
@@ -48,25 +51,30 @@
         <header class="navbar navbar-sticky navbar-expand-lg navbar-light">
             <div class="container position-relative">
                 <a class="navbar-brand" href={{URL::to('/home')}}>
-                    <img class="navbar-brand__regular" src={{("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
-                    <img class="navbar-brand__sticky" src={{("public/frontend/img/brand-logo-black.png")}} alt="sticky brand-logo">
+                    <img class="navbar-brand__regular" src={{("public/frontend/img/brand-logo-black.png")}}
+                        alt="brand-logo">
+                    <img class="navbar-brand__sticky" src={{("public/frontend/img/brand-logo-black.png")}}
+                        alt="sticky brand-logo">
                 </a>
                 <!--  End of brand logo -->
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- end of Nav toggler -->
 
                 <div class="navbar-inner">
                     <!--  Nav close button inside off-canvas/ mobile menu -->
-                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- end of Nav Toggoler -->
                     <nav>
                         <ul class="navbar-nav" id="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Landing Pages</a>
+                                <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">Landing Pages</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item" href={{URL::to('/home')}}>Home - 1</a>
@@ -92,7 +100,8 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages </a>
+                                <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">Pages </a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item" href="inner-knowledgebase.html">Knowledgebase</a>
@@ -121,35 +130,45 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog </a>
+                                <a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">Blog </a>
                                 <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Pages</a>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                            href="javascript:;">Blog Pages</a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="blog-grid-2-col.html">Blog Grid 2 Column</a>
+                                                <a class="dropdown-item" href="blog-grid-2-col.html">Blog Grid 2
+                                                    Column</a>
                                             </li>
 
                                             <li>
-                                                <a class="dropdown-item" href="blog-grid-3-col.html">Blog Grid 3 Column</a>
+                                                <a class="dropdown-item" href="blog-grid-3-col.html">Blog Grid 3
+                                                    Column</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-left.html">Blog Sidebar Left</a>
+                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-left.html">Blog
+                                                    Sidebar Left</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-right.html">Blog Sidebar right</a>
+                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-right.html">Blog
+                                                    Sidebar right</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Details</a>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                            href="javascript:;">Blog Details</a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a class="dropdown-item" href="blog-details-full.html">Blog Details Full</a>
+                                                <a class="dropdown-item" href="blog-details-full.html">Blog Details
+                                                    Full</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="blog-details-sidebar-right.html">Blog Details Sidebar Right</a>
+                                                <a class="dropdown-item" href="blog-details-sidebar-right.html">Blog
+                                                    Details Sidebar Right</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="blog-details-sidebar-left.html">Blog Details Sidebar Left</a>
+                                                <a class="dropdown-item" href="blog-details-sidebar-left.html">Blog
+                                                    Details Sidebar Left</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -165,7 +184,8 @@
                     </nav>
                 </div>
                 <div class="d-flex align-items-center ml-lg-1 ml-xl-2 mr-4 mr-sm-6 m-lg-0">
-                    <a href="{{URL::to('/login')}}" class="color--primary font-w--600 mr-2 d-none d-sm-inline-block">Login</a>
+                    <a href="{{URL::to('/login')}}"
+                        class="color--primary font-w--600 mr-2 d-none d-sm-inline-block">Login</a>
                     <a href="#" class="btn btn-size--md btn-bg--primary rounded--none btn-hover--3d">
                         <span class="btn__text font-w--500">Purchase now</span>
                     </a>
@@ -183,20 +203,24 @@
                     <div class="col-12 col-md-9 col-lg-4 mb-4 mb-xl-0">
                         <div class="pr-xl-3">
                             <span class="mb-3">
-                                    <img src={{("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
-                                </span>
-                            <p class="mb-1">The main objectives of the project are to meet the needs of cryptocurrency projects and users, and to provide access to investment product.</p>
+                                <img src={{("public/frontend/img/brand-logo-black.png")}} alt="brand-logo">
+                            </span>
+                            <p class="mb-1">The main objectives of the project are to meet the needs of cryptocurrency
+                                projects and users, and to provide access to investment product.</p>
                             <p>© SpaceMax, 2018.</p>
                             <br>
                             <ul class="icon-group mb-0">
                                 <li><a href="#" class="text-color--700"><i class="fab fa-medium-m"></i></a></li>
                                 <li><a href="#" class="text-color--700"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="text-color--700"><i class="fab fa-facebook-square"></i></a></li>
                                 <li><a href="#" class="text-color--700"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#" class="text-color--700"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="#" class="text-color--700"><i class="fab fa-telegram-plane"></i></a></li>
+                                <li><a href="#" class="text-color--700"><i class="fas fa-headset"></i></a></li>
                                 <li><a href="#" class="text-color--700"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#" class="text-color--700"><i class="fab fa-pinterest"></i></a></li>
+                                <li><a href="#" class="text-color--700"><i class="fas fa-video"></i></i></a></li>
                             </ul>
+
+
                         </div>
                     </div>
                     <!-- end of col -->
