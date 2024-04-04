@@ -26,6 +26,35 @@ class MenuController extends Controller
         $manager_menu = view('admin.menu.all_menu')->with('all_menus', $all_menus);
         return view('admin_layout')->with('admin.menu.all_menu', $manager_menu);
     }
+
+    // get menu if status = 1
+    public function getMenuActive()
+    {
+        $active_menus = DB::table('tbl_menu')
+            ->where('menu_status', 1)
+            ->orderBy('id_menu', 'asc')
+            ->get();
+
+        $active_submenus = DB::table('tbl_sub_menu')
+            ->where('menu_sub_status', 1)
+            ->orderBy('id_sub_menu', 'asc')
+            ->get();
+
+        $all_active_menus = [];
+
+        foreach ($active_menus as $menu) {
+            $menu->submenus = [];
+            foreach ($active_submenus as $submenu) {
+                if ($submenu->id_parent == $menu->id_menu) {
+                    $menu->submenus[] = $submenu;
+                }
+            }
+            $all_active_menus[] = $menu;
+        }
+
+        return $all_active_menus;
+    }
+    
      
     // menu
     public function add_menu(){

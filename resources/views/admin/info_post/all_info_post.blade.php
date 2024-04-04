@@ -9,7 +9,7 @@
                     <a href={{URL::to('/dashboard')}}>Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href={{URL::to('/all-info-post')}}>Trang thông tint</a>
+                    <a href={{URL::to('/all-info-post')}}>Trang thông tin</a>
                 </li>
                 <li class="breadcrumb-item active">
                     <strong>Danh sách trang thông tin</strong>
@@ -62,7 +62,6 @@
                         <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
                             <thead>
                                 <tr>
-                                    {{-- <th data-toggle="true">Thứ tự hiển thị</th> --}}
                                     <th data-toggle="true">Tiêu đề</th>
                                     <th data-hide="all">Nội dung</th>
                                     <th data-toggle="true">Tác giả</th>
@@ -74,9 +73,6 @@
                             <tbody>
                                 @foreach ($all_info_post as $key => $item)
                                     <tr>
-                                        {{-- <td>
-                                            {{ $item->info_post_index }}
-                                        </td> --}}
                                         <td>
                                             {{ $item->info_post_title }}
                                         </td>

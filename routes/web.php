@@ -10,12 +10,17 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\SupportLinkController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\IntroduceController;
 
-//Frontend
+//Frontend -----------------------------------------------------------------
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 
-//Backend
+//Post
+Route::get('/all-post', [PostController::class, 'show_post_home']);
+
+
+//Backend -----------------------------------------------------------------
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/dashboard', [AdminController::class, 'show_dashboard']);
 Route::get('/admin-logout', [AdminController::class, 'logout']);
@@ -49,6 +54,14 @@ Route::get('/unactive-post-detail/{post_id}', [PostController::class, 'unactive_
 
 Route::post('/save-post-detail', [PostController::class, 'save_post']);
 Route::post('/update-post-detail/{post_id}', [PostController::class, 'update_post']);
+//-----------------
+Route::get('/post-detail-by-id/{post_id}', [PostController::class, 'post_detail_by_id']);
+
+//Get introduce post
+Route::get('/gioi-thieu-einvoice-viet-nam', [IntroduceController::class, 'get_post_introduce']);
+
+//Get instruct post
+Route::get('/huong-dan-su-dung', [IntroduceController::class, 'get_post_instruct']);
 
 //User
 Route::get('/all-user', [UserController::class, 'all_user']);
@@ -71,7 +84,6 @@ Route::post('/update-link/{id}', [SupportLinkController::class, 'update_link']);
 
 //Menu
 Route::get('/all-menu', [MenuController::class, 'all_menu']);
-
 Route::get('/active-menu-detail/{id}', [MenuController::class, 'active_menu']);
 Route::get('/unactive-menu-detail/{id}', [MenuController::class, 'unactive_menu']);
 Route::get('/edit-menu-detail/{id}', [MenuController::class, 'edit_menu']);
@@ -98,4 +110,5 @@ Route::get('/active-info-post/{info_post_id}', [InfoPostController::class, 'acti
 Route::get('/unactive-info-post/{info_post_id}', [InfoPostController::class, 'unactive_info_post']);
 
 Route::post('/save-info-post', [InfoPostController::class, 'save_info_post']);
+
 Route::post('/update-info-post/{info_post_id}', [InfoPostController::class, 'update_info_post']);

@@ -6553,6 +6553,7 @@ body.boxed-layout .switchable__image {
 
 .navbar-sticky--moved-up .navbar-brand__regular {
   display: none;
+  width: 100px;
 }
 
 .navbar-sticky--moved-up .navbar-brand__sticky {
@@ -6860,6 +6861,7 @@ body.boxed-layout .switchable__image {
   .navbar-inner .dropdown-menu:before {
     content: none;
   }
+
   .dropdown-item {
     color: rgba(255, 255, 255, 0.8);
   }
