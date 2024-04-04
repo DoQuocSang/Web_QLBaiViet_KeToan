@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\SupportLinkController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\IntroduceController;
 
 //Frontend -----------------------------------------------------------------
 Route::get('/', [HomeController::class, 'index']);
@@ -55,6 +56,12 @@ Route::post('/save-post-detail', [PostController::class, 'save_post']);
 Route::post('/update-post-detail/{post_id}', [PostController::class, 'update_post']);
 //-----------------
 Route::get('/post-detail-by-id/{post_id}', [PostController::class, 'post_detail_by_id']);
+
+//Get introduce post
+Route::get('/gioi-thieu-einvoice-viet-nam', [IntroduceController::class, 'get_post_introduce']);
+
+//Get instruct post
+Route::get('/huong-dan-su-dung', [IntroduceController::class, 'get_post_instruct']);
 
 //User
 Route::get('/all-user', [UserController::class, 'all_user']);

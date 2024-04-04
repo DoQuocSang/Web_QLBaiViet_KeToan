@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SpaceMax | Multi Purpose HTML Template</title>
+    <title>Einvoice Việt Nam</title>
     <!-- favicon CSS -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <!-- fonts -->
@@ -18,6 +18,11 @@
     <link rel="stylesheet" href={{asset("public/frontend/css/app.css")}}>
     <!-- Your CSS -->
     <link rel="stylesheet" href={{asset("public/frontend/css/custom.css")}}>
+
+    <?php
+        $menuController = new \App\Http\Controllers\MenuController();
+        $all_active_menus = $menuController->getMenuActive();
+    ?>
 
     <style>
         .custom-icon {
@@ -32,7 +37,6 @@
 </head>
 
 <body class="theme-fern" data-spy="scroll" data-target="#navbar-nav" data-animation="false" data-appearance="light">
-
     <!-- =========== Start of Loader ============ -->
     <div class="preloader">
         <div class="wrapper">
@@ -72,10 +76,6 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- end of Nav Toggoler -->
-                    <?php
-                        $menuController = new \App\Http\Controllers\MenuController();
-                        $all_active_menus = $menuController->getMenuActive();
-                    ?>
                     <nav>
                         <ul class="navbar-nav" id="navbar-nav">
                             @foreach($all_active_menus as $menu)
@@ -83,9 +83,6 @@
                                 <li class="nav-item{{ $hasSubmenu ? ' dropdown' : '' }}">
                                     <a class="text-white nav-link{{ $hasSubmenu ? ' dropdown-toggle' : '' }}" href="{{ $hasSubmenu ? 'javascript:;' : $menu->menu_url }}" @if($hasSubmenu) data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @endif>
                                         {{ $menu->menu_name }}
-                                        {{-- @if($hasSubmenu)
-                                            <span class="arrow" style="transform: translateX(200px);"></span>
-                                        @endif --}}
                                     </a>
                                     @if($hasSubmenu)
                                         <ul class="dropdown-menu">
@@ -96,7 +93,6 @@
                                             @endforeach
                                         </ul>
                                     @endif
-                                </li>
                             @endforeach
                         </ul>
                         <!-- end of nav menu items -->
@@ -187,6 +183,7 @@
                 <p class="text-white text-center">Copyright 2020 @ AM-Einvoice. All rights reserved.</p>
             </div>
         </footer>
+
         <!-- =========== End of Footer ============ -->
     </main>
 

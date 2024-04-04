@@ -120,7 +120,7 @@
                     @foreach($all_link as $key => $link)
                     <div class="col mb-3">
                         <a href="{{ URL::to($link->url) }}" class="card border--none bg-white text-center box-shadow--4 py-4 px-2 d-flex align-items-center card-hover--shadow-3d">
-                            <span class="icon--lg color--primary bg-color--primary-opacity--10 rounded--full mb-2"> <i class="{{ $link->icon_class }}"></i> </span>
+                            {{-- <span class="icon--lg color--primary bg-color--primary-opacity--10 rounded--full mb-2"> <i class="{{ $link->icon_class }}"></i> </span> --}}
                             <h3 class="h5-font font-w--700 mb-1">{{ str_replace('*', '', $link->title) }}</h3>
                             {{-- <p class="font-size--16">If you are looking at blank cassettes on the web, you may be very confused at the price.</p> --}}
                         </a>
