@@ -1,5 +1,12 @@
 # Website quản lý thông tin bài viết hỗ trợ người dùng phần mềm kế toán
-Các chức năng chính:
+Xây dựng ứng dụng Web sử dụng Laravel và MySql
+
+## Thành viên:
+- Đỗ Quốc Sang
+- Đào Quang Huy
+- Nguyễn Thị Hoài Trang
+
+## Các chức năng chính:
 
 **1. Phân hệ người quản trị:**
 - Đăng nhập trang quản trị
